@@ -136,6 +136,17 @@ with st.sidebar:
     st.title("🌿 Smart Fabric AI")
     st.caption("Intelligent Sustainable Textile Decision System")
 
+    zip_path = os.path.join(os.path.dirname(__file__), "smart-fabric-recommendation-github-upload.zip")
+    if os.path.exists(zip_path):
+        with open(zip_path, "rb") as fp:
+            st.download_button(
+                label="📦 Download Project (ZIP)",
+                data=fp.read(),
+                file_name="smart-fabric-recommendation.zip",
+                mime="application/zip",
+                use_container_width=True,
+            )
+
     st.markdown("---")
     st.subheader("👤 User Profile Session")
 
@@ -211,6 +222,19 @@ with tabs[0]:
         "<p class='subtitle'>Track 1 — FUTURE FABRIC | Balancing Multi-Dimensional Sustainability, Garment Functionality & User Preferences</p>",
         unsafe_allow_html=True,
     )
+
+    zip_path = os.path.join(os.path.dirname(__file__), "smart-fabric-recommendation-github-upload.zip")
+    if os.path.exists(zip_path):
+        with open(zip_path, "rb") as fp:
+            st.download_button(
+                label="⬇️ Click Here to Download Complete Project (.ZIP Archive)",
+                data=fp.read(),
+                file_name="smart-fabric-recommendation.zip",
+                mime="application/zip",
+                type="primary",
+                use_container_width=True,
+            )
+        st.markdown("<br>", unsafe_allow_html=True)
 
     col_hero1, col_hero2 = st.columns([3, 2])
     with col_hero1:
