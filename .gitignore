@@ -55,6 +55,11 @@ venv.bak/
 Thumbs.db
 desktop.ini
 
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
 # Streamlit local state
 .streamlit/*
 !.streamlit/config.toml
