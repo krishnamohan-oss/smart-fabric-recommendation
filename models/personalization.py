@@ -54,12 +54,33 @@ class PersonalizationEngine:
 
         avg_rating = round(float(df["rating"].mean()), 2) if not df.empty else 0.0
 
-        # Extract top categories if available
+        # Extract top categories and learned priority tendencies
         top_categories: List[str] = []
-        if not df.empty and "decision_factors" in df.columns:
-            # Check factors mentioned in history
-            factors = df["decision_factors"].dropna().tolist()
-            top_categories = list(set([f.strip() for f in ",".join(factors).split(",") if f.strip()]))
+        learned_priorities = {
+            "sustainability": "Medium",
+            "comfort": "Medium",
+            "durability": "Medium",
+            "cost": "Medium",
+        }
+
+        if not df.empty:
+            factors_str = " ".join(df["decision_factors"].dropna().astype(str).str.lower())
+            
+            # Count factor frequencies
+            sust_count = factors_str.count("sustainab") + factors_str.count("eco")
+            comf_count = factors_str.count("comfort") + factors_str.count("breathab")
+            dur_count = factors_str.count("durab") + factors_str.count("strength")
+            cost_count = factors_str.count("budget") + factors_str.count("cost") + factors_str.count("afford") + (df["budget"].str.lower() == "low").sum()
+
+            total_entries = len(df)
+            learned_priorities["sustainability"] = "High" if sust_count >= total_entries * 0.5 else ("Low" if sust_count == 0 and total_entries >= 2 else "Medium")
+            learned_priorities["comfort"] = "High" if comf_count >= total_entries * 0.5 else ("Low" if comf_count == 0 and total_entries >= 2 else "Medium")
+            learned_priorities["durability"] = "High" if dur_count >= total_entries * 0.5 else ("Low" if dur_count == 0 and total_entries >= 2 else "Medium")
+            learned_priorities["cost"] = "High" if cost_count >= total_entries * 0.5 else ("Low" if cost_count == 0 and total_entries >= 2 else "Medium")
+
+            if "decision_factors" in df.columns:
+                factors = df["decision_factors"].dropna().tolist()
+                top_categories = list(set([f.strip() for f in ",".join(factors).split(",") if f.strip()]))
 
         return {
             "user_id": user_id,
@@ -69,6 +90,7 @@ class PersonalizationEngine:
             "fabric_affinities": fabric_affinities,
             "top_categories": top_categories,
             "avg_rating": avg_rating,
+            "learned_priorities": learned_priorities,
         }
 
     def compute_fabric_preference_score(

@@ -30,36 +30,38 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom Eco-Modern CSS
+# Custom Professional Dark & Emerald Theme CSS
 st.markdown(
     """
     <style>
-    /* Main Theme Variables */
+    /* Main Dark Theme Variables */
     :root {
-        --eco-dark: #1b4332;
-        --eco-primary: #2d6a4f;
-        --eco-light: #52b788;
-        --eco-bg: #f4f9f4;
-        --eco-card: #ffffff;
-        --eco-accent: #74c69e;
+        --bg-dark: #0f172a;
+        --card-dark: #1e293b;
+        --border-dark: #334155;
+        --text-light: #f8fafc;
+        --text-muted: #94a3b8;
+        --emerald: #10b981;
+        --emerald-dark: #065f46;
+        --emerald-light: #34d399;
     }
     
     .main-title {
         font-size: 2.3rem;
         font-weight: 800;
-        color: #1b4332;
+        color: #f8fafc;
         margin-bottom: 0.2rem;
     }
     
     .subtitle {
         font-size: 1.05rem;
-        color: #40916c;
+        color: #34d399;
         margin-bottom: 1.5rem;
     }
     
     .trophy-badge {
-        background: linear-gradient(135deg, #2d6a4f, #1b4332);
-        color: white;
+        background: linear-gradient(135deg, #059669, #065f46);
+        color: #ffffff;
         padding: 0.35rem 0.85rem;
         border-radius: 9999px;
         font-weight: 700;
@@ -67,42 +69,97 @@ st.markdown(
         display: inline-block;
         margin-bottom: 0.5rem;
     }
+
+    .confidence-badge {
+        background: rgba(16, 185, 129, 0.15);
+        color: #34d399;
+        border: 1px solid #059669;
+        padding: 0.3rem 0.75rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
     
     .top-match-card {
-        background-color: #ffffff;
-        border: 2px solid #52b788;
-        border-radius: 12px;
+        background-color: #1e293b;
+        border: 2px solid #10b981;
+        border-radius: 14px;
         padding: 1.5rem;
-        box-shadow: 0 4px 14px rgba(45, 106, 79, 0.08);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
         margin-bottom: 1.5rem;
+        color: #f8fafc;
     }
     
     .alt-card {
-        background-color: #ffffff;
-        border: 1px solid #d8f3dc;
-        border-radius: 10px;
-        padding: 1.1rem;
+        background-color: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 1.2rem;
         height: 100%;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        color: #f8fafc;
+    }
+
+    .stat-card {
+        background-color: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 14px 10px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     
     .metric-pill {
         display: inline-block;
-        padding: 0.2rem 0.6rem;
+        padding: 0.25rem 0.65rem;
         border-radius: 6px;
         font-size: 0.8rem;
         font-weight: 600;
         margin-right: 0.4rem;
         margin-bottom: 0.4rem;
     }
-    .pill-green { background-color: #d8f3dc; color: #1b4332; }
-    .pill-blue { background-color: #e0f2fe; color: #0369a1; }
-    .pill-orange { background-color: #fef3c7; color: #92400e; }
+    .pill-green { background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .pill-blue { background-color: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+    .pill-orange { background-color: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }
     
     .score-circle {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
         font-weight: 800;
-        color: #2d6a4f;
+        color: #34d399;
+    }
+
+    .progress-row {
+        margin-bottom: 10px;
+    }
+    .progress-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.86rem;
+        font-weight: 600;
+        color: #e2e8f0;
+        margin-bottom: 3px;
+    }
+    .progress-bar-bg {
+        background: #334155;
+        border-radius: 9999px;
+        height: 9px;
+        overflow: hidden;
+    }
+    .progress-bar-fill {
+        height: 100%;
+        border-radius: 9999px;
+        background: linear-gradient(90deg, #10b981, #34d399);
+    }
+    
+    .pipeline-step {
+        background-color: #1e293b;
+        border: 1px solid #334155;
+        border-left: 4px solid #10b981;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        color: #f8fafc;
     }
     
     .stTabs [data-baseweb="tab-list"] {
@@ -126,7 +183,9 @@ def get_engine():
 
 engine = get_engine()
 
-# Sidebar Setup
+# ==============================================================================
+# SIDEBAR SETUP (High-Contrast Dark Aesthetic & Personalization Summary)
+# ==============================================================================
 with st.sidebar:
     st.image(
         "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&q=80",
@@ -136,7 +195,10 @@ with st.sidebar:
     st.title("🌿 Smart Fabric AI")
     st.caption("Intelligent Sustainable Textile Decision System")
 
+    # Download project bundle button
     zip_path = os.path.join(os.path.dirname(__file__), "smart-fabric-recommendation-github-upload.zip")
+    if not os.path.exists(zip_path):
+        zip_path = os.path.join(os.path.dirname(__file__), "smart-fabric-recommendation.zip")
     if os.path.exists(zip_path):
         with open(zip_path, "rb") as fp:
             st.download_button(
@@ -160,14 +222,43 @@ with st.sidebar:
     custom_user = st.text_input("Or enter custom user ID", value="").strip()
     active_user = custom_user if custom_user else selected_user
 
-    # Display active user profile summary
+    # High-contrast, dark professional personalization summary card
     user_prof = engine.personalization_engine.get_user_profile(active_user)
+    learned = user_prof.get("learned_priorities", {
+        "sustainability": "Medium",
+        "comfort": "Medium",
+        "durability": "Medium",
+        "cost": "Medium",
+    })
+
     st.markdown(
         f"""
-        <div style='background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px; margin-top: 8px;'>
-            <small><b>History:</b> {user_prof['interaction_count']} selections</small><br>
-            <small><b>Personalization Weight:</b> {int(user_prof['learning_weight'] * 100)}% active</small><br>
-            <small><b>Avg User Rating:</b> {'⭐ ' + str(user_prof['avg_rating']) if user_prof['avg_rating'] > 0 else 'No ratings yet'}</small>
+        <div style='background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-top: 8px; color: #f8fafc;'>
+            <div style='font-size: 0.9rem; font-weight: 800; color: #34d399; letter-spacing: 0.05em; margin-bottom: 6px;'>
+                👤 PERSONALIZATION
+            </div>
+            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
+                <b>User:</b> <span style='color: #ffffff; font-weight: 600;'>{active_user}</span>
+            </div>
+            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
+                <b>History:</b> {user_prof['interaction_count']} selections logged
+            </div>
+            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
+                <b>Personalization Weight:</b> <span style='color: #34d399; font-weight: 700;'>{int(user_prof['learning_weight'] * 100)}%</span>
+            </div>
+            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 8px;'>
+                <b>Avg User Rating:</b> {'⭐ ' + str(user_prof['avg_rating']) if user_prof['avg_rating'] > 0 else 'No ratings yet'}
+            </div>
+            <hr style='border-color: #334155; margin: 8px 0;'>
+            <div style='font-size: 0.8rem; font-weight: 700; color: #94a3b8; margin-bottom: 6px;'>
+                Learned Preferences
+            </div>
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 4px; font-size: 0.78rem; color: #e2e8f0;'>
+                <div>🌱 Sust: <b style='color: #34d399;'>{learned['sustainability']}</b></div>
+                <div>☁️ Comf: <b style='color: #38bdf8;'>{learned['comfort']}</b></div>
+                <div>💪 Durab: <b style='color: #fbbf24;'>{learned['durability']}</b></div>
+                <div>💰 Cost: <b style='color: #f472b6;'>{learned['cost']}</b></div>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -191,7 +282,7 @@ with st.sidebar:
     stats = get_feedback_summary_stats()
     st.markdown(
         f"""
-        <small style='color: #6b7280;'>
+        <small style='color: #94a3b8;'>
         <b>Global DB Stats:</b><br>
         • Total Reviews: {stats['total_reviews']}<br>
         • Overall Acceptance: {stats['acceptance_rate']}%<br>
@@ -201,7 +292,9 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-# App Navigation Tabs
+# ==============================================================================
+# MAIN TABS NAVIGATION
+# ==============================================================================
 tabs = st.tabs([
     "🏠 Overview",
     "🎯 Recommendation",
@@ -223,7 +316,7 @@ with tabs[0]:
         unsafe_allow_html=True,
     )
 
-    zip_path = os.path.join(os.path.dirname(__file__), "smart-fabric-recommendation-github-upload.zip")
+    # Download banner
     if os.path.exists(zip_path):
         with open(zip_path, "rb") as fp:
             st.download_button(
@@ -258,9 +351,9 @@ with tabs[0]:
     with col_hero2:
         st.markdown(
             """
-            <div style='background: #ffffff; border: 1px solid #d8f3dc; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);'>
-                <h4 style='color: #2d6a4f; margin-top: 0;'>🚀 Quick Start Workflow</h4>
-                <ol style='padding-left: 20px; color: #374151; font-size: 0.95rem; line-height: 1.6;'>
+            <div style='background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);'>
+                <h4 style='color: #34d399; margin-top: 0;'>🚀 Quick Start Workflow</h4>
+                <ol style='padding-left: 20px; color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;'>
                     <li>Open the <b>🎯 Recommendation</b> tab.</li>
                     <li>Select your garment type (e.g., <i>T-shirt, Jacket, Saree</i>).</li>
                     <li>Specify your climate and priority sliders.</li>
@@ -272,22 +365,60 @@ with tabs[0]:
             unsafe_allow_html=True,
         )
 
+        st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("#### Key System Metrics")
-        kpi1, kpi2, kpi3 = st.columns(3)
-        with kpi1:
-            st.metric("Curated Fabrics", len(engine.get_all_fabrics()))
-        with kpi2:
-            st.metric("Garment Types", len(engine.get_available_garments()))
-        with kpi3:
-            st.metric("Evaluation Criteria", "14+ Metrics")
+        
+        # 4 responsive cards ensuring no text truncation (specifically fixing "14+ Criteria")
+        kpi_cols = st.columns(4)
+        with kpi_cols[0]:
+            st.markdown(
+                """
+                <div class='stat-card'>
+                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Curated Fabrics</div>
+                    <div style='font-size: 1.35rem; color: #34d399; font-weight: 800;'>22</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with kpi_cols[1]:
+            st.markdown(
+                """
+                <div class='stat-card'>
+                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Garment Types</div>
+                    <div style='font-size: 1.35rem; color: #38bdf8; font-weight: 800;'>13</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with kpi_cols[2]:
+            st.markdown(
+                """
+                <div class='stat-card'>
+                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Evaluation Criteria</div>
+                    <div style='font-size: 1.15rem; color: #10b981; font-weight: 800; white-space: nowrap;'>14+ Criteria</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with kpi_cols[3]:
+            st.markdown(
+                """
+                <div class='stat-card'>
+                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Recommendation Factors</div>
+                    <div style='font-size: 1.15rem; color: #fbbf24; font-weight: 800; white-space: nowrap;'>Multi-Criteria</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
 # ==============================================================================
-# TAB 2: RECOMMENDATION (CORE ENGINE)
+# TAB 2: RECOMMENDATION (CORE SHOWCASE)
 # ==============================================================================
 with tabs[1]:
     st.markdown("### 🎯 Find Your Ideal Sustainable Fabric")
-    st.caption("Select your garment context, climate conditions, and design priorities below.")
+    st.caption("Specify garment context, climate conditions, and design priorities to calculate the optimal fabric.")
 
+    # A. USER INPUTS
     with st.form("recommendation_form"):
         col_in1, col_in2, col_in3 = st.columns(3)
 
@@ -295,7 +426,7 @@ with tabs[1]:
             garments_list = engine.get_available_garments()
             sel_garment = st.selectbox("1. Garment Type", garments_list, index=garments_list.index("T-shirt") if "T-shirt" in garments_list else 0)
             sel_climate = st.selectbox("2. Climate Condition", ["Hot", "Hot & Humid", "Moderate", "Cold", "Rainy"], index=2)
-            sel_budget = st.selectbox("3. Budget Tier", ["Low", "Medium", "High"], index=1)
+            sel_budget = st.selectbox("3. Cost Priority (Budget)", ["Low", "Medium", "High"], index=1)
 
         with col_in2:
             sel_sustainability = st.select_slider("4. Sustainability Priority", options=["Low", "Medium", "High"], value="High")
@@ -342,77 +473,168 @@ with tabs[1]:
     explanation = rec_result["explanation"]
     tradeoffs = rec_result["tradeoffs"]
 
+    # Calculate transparent Data Confidence indicator from availability of fabric fields
+    required_eval_fields = [
+        "sustainability_score", "water_efficiency", "carbon_score", "recyclability",
+        "biodegradability", "breathability", "comfort", "durability", "stretchability",
+        "moisture_management", "thermal_insulation", "water_resistance", "affordability_score"
+    ]
+    present_fields = sum(1 for field in required_eval_fields if field in top and pd.notna(top[field]))
+    completeness_pct = int((present_fields / len(required_eval_fields)) * 100)
+    
+    if completeness_pct >= 95:
+        confidence_label = "🟢 High Confidence"
+        confidence_desc = f"{completeness_pct}% Data Complete"
+    elif completeness_pct >= 75:
+        confidence_label = "🟡 Moderate Confidence"
+        confidence_desc = f"{completeness_pct}% Data Complete"
+    else:
+        confidence_label = "🔴 Limited Data"
+        confidence_desc = f"{completeness_pct}% Data Complete"
+
     st.markdown("---")
 
-    # Dynamic Weights Visual Bar
-    st.markdown("##### ⚖️ Dynamic Criteria Weights for This Request")
-    w_cols = st.columns(6)
-    w_cols[0].metric("Sustainability", f"{int(weights['sustainability'] * 100)}%")
-    w_cols[1].metric("Climate", f"{int(weights['climate'] * 100)}%")
-    w_cols[2].metric("Comfort", f"{int(weights['comfort'] * 100)}%")
-    w_cols[3].metric("Durability", f"{int(weights['durability'] * 100)}%")
-    w_cols[4].metric("Cost/Affordability", f"{int(weights['cost'] * 100)}%")
-    w_cols[5].metric("Performance", f"{int(weights['performance'] * 100)}%")
+    # B. BEST MATCH CARD
+    garment_compat_score = int(top.get("compatibility_score", 95))
+    climate_suit_score = int(top["climate_score"])
+    sust_score = int(top["sustainability_score"])
+    comf_score = int(top["comfort_score"])
+    dur_score = int(top["durability_score"])
+    cost_score = int(top["cost_score"])
 
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # 🏆 BEST MATCH CARD
     st.markdown(
         f"""
         <div class='top-match-card'>
-            <div style='display: flex; justify-content: space-between; align-items: flex-start;'>
+            <div style='display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;'>
                 <div>
                     <span class='trophy-badge'>🏆 BEST MATCH</span>
-                    <h2 style='color: #1b4332; margin: 0;'>{top['fabric_name']}</h2>
-                    <p style='color: #4b5563; margin-top: 4px; font-size: 0.95rem;'>
-                        <b>Category:</b> {top['category']} | <b>Origin:</b> {top['origin_type']} | <b>Garment:</b> {sel_garment}
+                    <span class='confidence-badge' title='Confidence reflects the completeness of available fabric information used for this recommendation.'>
+                        {confidence_label} ({confidence_desc})
+                    </span>
+                    <h2 style='color: #ffffff; margin: 8px 0 2px 0;'>{top['fabric_name']}</h2>
+                    <p style='color: #94a3b8; margin: 0; font-size: 0.95rem;'>
+                        <b>Category:</b> {top['category']} | <b>Origin:</b> {top['origin_type']} | <b>Target Garment:</b> {sel_garment}
                     </p>
                 </div>
                 <div style='text-align: right;'>
-                    <div class='score-circle'>{top['final_score']:.1f}<span style='font-size: 1.1rem; color: #6b7280;'>/100</span></div>
-                    <small style='color: #4b5563; font-weight: 600;'>Overall Compatibility Score</small>
+                    <div style='font-size: 0.85rem; color: #94a3b8; font-weight: 600;'>Overall Compatibility</div>
+                    <div class='score-circle'>{top['final_score']:.1f}<span style='font-size: 1.1rem; color: #94a3b8;'> / 100</span></div>
                 </div>
             </div>
-            <div style='margin-top: 12px;'>
-                <span class='metric-pill pill-green'>🌱 Sustainability: {top['sustainability_score']}/100</span>
-                <span class='metric-pill pill-blue'>🌤️ Climate Fit: {top['climate_score']}/100</span>
-                <span class='metric-pill pill-blue'>☁️ Comfort: {top['comfort_score']}/100</span>
-                <span class='metric-pill pill-green'>🛡️ Durability: {top['durability_score']}/100</span>
-                <span class='metric-pill pill-orange'>💰 Affordability: {top['cost_score']}/100</span>
-                <span class='metric-pill pill-blue'>⚡ Performance: {top['performance_score']}/100</span>
+            <div style='margin-top: 14px;'>
+                <span class='metric-pill pill-green'>🌱 Sustainability: {sust_score}/100</span>
+                <span class='metric-pill pill-blue'>🌤️ Climate Fit: {climate_suit_score}/100</span>
+                <span class='metric-pill pill-blue'>☁️ Comfort: {comf_score}/100</span>
+                <span class='metric-pill pill-green'>🛡️ Durability: {dur_score}/100</span>
+                <span class='metric-pill pill-orange'>💰 Cost Fit: {cost_score}/100</span>
+                <span class='metric-pill pill-green'>🎯 Garment Compatibility: {garment_compat_score}/100</span>
             </div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    # Detailed Explainable AI Section
+    # C. SCORE BREAKDOWN (Clean Horizontal Progress Bars with Real Calculated Values)
+    st.markdown("#### 📊 Score Breakdown by Major Criteria")
+    st.caption("Actual calculated contributions based on garment compatibility and multi-criteria utility weighting:")
+
+    sb_col1, sb_col2 = st.columns(2)
+    with sb_col1:
+        st.markdown(
+            f"""
+            <div class='progress-row'>
+                <div class='progress-header'><span>Garment Compatibility</span><span>{garment_compat_score}/100</span></div>
+                <div class='progress-bar-bg'><div class='progress-bar-fill' style='width: {garment_compat_score}%;'></div></div>
+            </div>
+            <div class='progress-row'>
+                <div class='progress-header'><span>Climate Suitability ({sel_climate})</span><span>{climate_suit_score}/100</span></div>
+                <div class='progress-bar-bg'><div class='progress-bar-fill' style='width: {climate_suit_score}%;'></div></div>
+            </div>
+            <div class='progress-row'>
+                <div class='progress-header'><span>Sustainability Score</span><span>{sust_score}/100</span></div>
+                <div class='progress-bar-bg'><div class='progress-bar-fill' style='width: {sust_score}%;'></div></div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    with sb_col2:
+        st.markdown(
+            f"""
+            <div class='progress-row'>
+                <div class='progress-header'><span>Comfort & Breathability</span><span>{comf_score}/100</span></div>
+                <div class='progress-bar-bg'><div class='progress-bar-fill' style='width: {comf_score}%;'></div></div>
+            </div>
+            <div class='progress-row'>
+                <div class='progress-header'><span>Durability & Strength</span><span>{dur_score}/100</span></div>
+                <div class='progress-bar-bg'><div class='progress-bar-fill' style='width: {dur_score}%;'></div></div>
+            </div>
+            <div class='progress-row'>
+                <div class='progress-header'><span>Cost / Affordability</span><span>{cost_score}/100</span></div>
+                <div class='progress-bar-bg'><div class='progress-bar-fill' style='width: {cost_score}%;'></div></div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # D. "WHY THIS FABRIC?" XAI SECTION & E. TRADE-OFFS WITH RUNNER-UP
     col_why, col_tradeoffs = st.columns([1, 1])
 
     with col_why:
-        st.markdown("#### 💡 Why This Fabric?")
+        st.markdown("#### 💡 Why this fabric?")
         for pt in explanation["score_bullet_points"]:
             st.markdown(f"- ✅ {pt}")
 
         st.markdown(f"**Key Material Advantages:** {explanation['key_advantages']}")
         st.markdown(f"**Recommended Care:** `{explanation['care_instructions']}`")
 
-        # Check for personalization note
         if top.get("personalization_note") and "Standard" not in str(top["personalization_note"]):
             st.info(f"✨ **Personalized Insight:** {top['personalization_note']}")
 
     with col_tradeoffs:
-        st.markdown("#### ⚖️ Trade-offs & Considerations")
-        st.markdown(f"- ⚠️ **Watch out for:** {explanation['key_limitations']}")
+        st.markdown("#### ⚖️ Trade-offs (Best Match vs. Runner-Up)")
+        if alts:
+            runner_up = alts[0]
+            st.markdown(
+                f"""
+                <div style='background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-bottom: 12px; color: #f8fafc;'>
+                    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.85rem;'>
+                        <div style='border-right: 1px solid #334155; padding-right: 8px;'>
+                            <b style='color: #34d399;'>🏆 Best Match: {top['fabric_name']}</b><br>
+                            • Overall Score: <b>{top['final_score']:.1f}/100</b><br>
+                            • Sustainability: <b>{sust_score}/100</b><br>
+                            • Climate Suitability: <b>{climate_suit_score}/100</b><br>
+                            • Comfort: <b>{comf_score}/100</b><br>
+                            • Durability: <b>{dur_score}/100</b><br>
+                            <span style='color: #94a3b8; font-size: 0.78rem;'>Advantage: {str(top['advantages'])[:60]}...</span>
+                        </div>
+                        <div style='padding-left: 4px;'>
+                            <b style='color: #cbd5e1;'>🥈 Runner-up: {runner_up['fabric_name']}</b><br>
+                            • Overall Score: <b>{runner_up['final_score']:.1f}/100</b><br>
+                            • Sustainability: <b>{int(runner_up['sustainability_score'])}/100</b><br>
+                            • Climate Suitability: <b>{int(runner_up['climate_score'])}/100</b><br>
+                            • Comfort: <b>{int(runner_up['comfort_score'])}/100</b><br>
+                            • Durability: <b>{int(runner_up['durability_score'])}/100</b><br>
+                            <span style='color: #94a3b8; font-size: 0.78rem;'>Limitation: {str(runner_up['limitations'])[:60]}...</span>
+                        </div>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
-        if tradeoffs["runner_up_comparisons"]:
-            st.markdown("**Comparison vs. Runner-Up Alternatives:**")
-            for alt_t in tradeoffs["runner_up_comparisons"]:
+            # Concrete explanation of why Best Match ranked higher
+            if tradeoffs["runner_up_comparisons"]:
+                first_t = tradeoffs["runner_up_comparisons"][0]
                 st.markdown(
-                    f"- **#{alt_t['rank']} {alt_t['fabric_name']}** ({alt_t['overall_score']:.1f}/100): {alt_t['tradeoff_statement']} *{alt_t['why_not_selected']}*"
+                    f"**Comparison Summary:** {top['fabric_name']} ranked higher overall ({top['final_score']:.1f} vs {runner_up['final_score']:.1f}) for **{sel_garment}** in **{sel_climate}** climate. {first_t['tradeoff_statement']} *{first_t['why_not_selected']}*"
                 )
+        else:
+            st.write("No direct runner-up candidate meets this strict compatibility criteria.")
 
-        # Optional Gemini AI generated narrative
+        # Optional Gemini AI narrative
         if gemini_key:
             ai_narrative = generate_ai_llm_explanation(
                 top_fabric_name=top["fabric_name"],
@@ -429,7 +651,27 @@ with tabs[1]:
 
     st.markdown("---")
 
-    # Top 3 Alternatives Display
+    # F. PERSONALIZATION EXPLANATION SECTION
+    active_weight_pct = int(user_prof['learning_weight'] * 100)
+    general_weight_pct = 100 - active_weight_pct
+
+    st.markdown(
+        f"""
+        <div style='background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-bottom: 20px;'>
+            <h5 style='color: #34d399; margin: 0 0 6px 0;'>🧠 How Personalization Works</h5>
+            <div style='font-size: 1.1rem; font-weight: 700; color: #f8fafc; margin-bottom: 6px;'>
+                {general_weight_pct}% General Recommendation + {active_weight_pct}% User Preference (Target Model: 70% / 30%)
+            </div>
+            <p style='color: #cbd5e1; font-size: 0.9rem; margin: 0;'>
+                The recommendation combines general fabric suitability with your learned preferences from previous feedback. 
+                {"<b>Adaptive learning is currently active!</b>" if active_weight_pct > 0 else "<i>Currently using 100% general recommendation. Submit feedback below to activate your 30% preference learning weight.</i>"}
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Top Alternatives Display
     st.markdown("#### 🥈 Top Alternative Fabrics")
     if alts:
         alt_cols = st.columns(len(alts))
@@ -438,13 +680,13 @@ with tabs[1]:
                 st.markdown(
                     f"""
                     <div class='alt-card'>
-                        <span style='background: #e2e8f0; color: #334155; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;'>#{idx} ALTERNATIVE</span>
-                        <h4 style='color: #2d6a4f; margin: 6px 0;'>{alt_row['fabric_name']}</h4>
-                        <div style='font-size: 1.5rem; font-weight: 800; color: #1b4332;'>{alt_row['final_score']:.1f}<span style='font-size: 0.9rem; color: #64748b;'>/100</span></div>
-                        <p style='font-size: 0.82rem; color: #475569; margin: 4px 0;'><b>Category:</b> {alt_row['category']}</p>
-                        <p style='font-size: 0.8rem; color: #166534;'>🌱 Sust: <b>{alt_row['sustainability_score']}</b> | ☁️ Comf: <b>{alt_row['comfort_score']}</b></p>
-                        <p style='font-size: 0.8rem; color: #1e3a8a;'>🛡️ Dura: <b>{alt_row['durability_score']}</b> | 💰 Cost: <b>{alt_row['cost_score']}</b></p>
-                        <p style='font-size: 0.78rem; color: #64748b; margin-top: 6px;'>{alt_row['advantages'][:80]}...</p>
+                        <span style='background: #334155; color: #f8fafc; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;'>#{idx} ALTERNATIVE</span>
+                        <h4 style='color: #34d399; margin: 6px 0;'>{alt_row['fabric_name']}</h4>
+                        <div style='font-size: 1.5rem; font-weight: 800; color: #f8fafc;'>{alt_row['final_score']:.1f}<span style='font-size: 0.9rem; color: #94a3b8;'> / 100</span></div>
+                        <p style='font-size: 0.82rem; color: #cbd5e1; margin: 4px 0;'><b>Category:</b> {alt_row['category']}</p>
+                        <p style='font-size: 0.8rem; color: #34d399;'>🌱 Sust: <b>{alt_row['sustainability_score']}</b> | ☁️ Comf: <b>{alt_row['comfort_score']}</b></p>
+                        <p style='font-size: 0.8rem; color: #38bdf8;'>🛡️ Dura: <b>{alt_row['durability_score']}</b> | 💰 Cost: <b>{alt_row['cost_score']}</b></p>
+                        <p style='font-size: 0.78rem; color: #94a3b8; margin-top: 6px;'>{alt_row['advantages'][:75]}...</p>
                     </div>
                     """,
                     unsafe_allow_html=True,
@@ -453,33 +695,32 @@ with tabs[1]:
     st.markdown("---")
 
     # ==============================================================================
-    # USER FEEDBACK FORM (LEARNING LOOP)
+    # USER FEEDBACK SECTION (IMPROVED VISIBILITY & BUTTONS)
     # ==============================================================================
-    st.markdown("### 💬 Was this recommendation helpful? (Train Personalization)")
-    st.caption("Your feedback updates the SQLite persistence layer and improves recommendations for your user profile.")
+    st.markdown("### ⭐ Was this recommendation useful?")
+    st.caption("Your feedback updates your personal profile and trains the 70/30 adaptive learning model.")
 
     with st.form("feedback_form"):
         fb_col1, fb_col2, fb_col3 = st.columns([1, 1, 2])
 
         with fb_col1:
-            fb_rating = st.select_slider("Rating (1-5 stars)", options=[1, 2, 3, 4, 5], value=5)
+            fb_useful = st.radio("Was this recommendation useful?", ["👍 Yes", "👎 No"], index=0, horizontal=True)
 
         with fb_col2:
-            fb_would_choose = st.radio("Would you choose this fabric?", ["Yes", "No"], index=0, horizontal=True)
+            fb_rating = st.select_slider("Rate this recommendation", options=[1, 2, 3, 4, 5], value=5)
 
         with fb_col3:
-            # Options to pick which fabric they actually preferred
             all_candidate_names = [top["fabric_name"]] + [a["fabric_name"] for a in alts]
-            fb_selected_fabric = st.selectbox("Which fabric would you actually pick?", all_candidate_names, index=0)
+            fb_selected_fabric = st.selectbox("Which fabric would you actually choose?", all_candidate_names, index=0)
 
         fb_factors = st.multiselect(
             "What influenced your decision?",
             ["High comfort", "Exceptional breathability", "Eco-friendly sustainability", "Durability & strength", "Budget affordability", "Soft drape", "Ease of care"],
             default=["High comfort", "Eco-friendly sustainability"],
         )
-        fb_notes = st.text_input("Optional notes / feedback", placeholder="e.g., Perfect for summer daily wear...")
+        fb_notes = st.text_input("Optional notes / feedback", placeholder="e.g., Exactly what I was looking for...")
 
-        submit_feedback = st.form_submit_button("💾 Save Feedback & Update Personalization Model", use_container_width=True)
+        submit_feedback = st.form_submit_button("💾 Submit Feedback & Update Personalization", use_container_width=True)
 
         if submit_feedback:
             row_id = save_feedback(
@@ -490,12 +731,12 @@ with tabs[1]:
                 recommended_fabric=top["fabric_name"],
                 selected_fabric=fb_selected_fabric,
                 rating=fb_rating,
-                would_choose=(fb_would_choose == "Yes"),
+                would_choose=("Yes" in fb_useful),
                 decision_factors=", ".join(fb_factors),
                 user_notes=fb_notes,
             )
             st.success(
-                f"✅ Feedback logged! Profile for '{active_user}' updated. Future recommendations will adapt to your preference for {fb_selected_fabric}."
+                f"✅ Thank you! Your feedback helps personalize future recommendations. Profile for '{active_user}' updated!"
             )
             st.rerun()
 
@@ -531,14 +772,15 @@ with tabs[2]:
     plot_df = rec_result["ranked_df"].head(8).copy()
 
     fig_bars = go.Figure()
-    fig_bars.add_trace(go.Bar(name="Sustainability", x=plot_df["fabric_name"], y=plot_df["sustainability_score"], marker_color="#2d6a4f"))
-    fig_bars.add_trace(go.Bar(name="Climate Fit", x=plot_df["fabric_name"], y=plot_df["climate_score"], marker_color="#52b788"))
-    fig_bars.add_trace(go.Bar(name="Comfort", x=plot_df["fabric_name"], y=plot_df["comfort_score"], marker_color="#74c69e"))
-    fig_bars.add_trace(go.Bar(name="Durability", x=plot_df["fabric_name"], y=plot_df["durability_score"], marker_color="#95d5b2"))
-    fig_bars.add_trace(go.Bar(name="Affordability", x=plot_df["fabric_name"], y=plot_df["cost_score"], marker_color="#b7e4c7"))
-    fig_bars.add_trace(go.Bar(name="Performance", x=plot_df["fabric_name"], y=plot_df["performance_score"], marker_color="#0077b6"))
+    fig_bars.add_trace(go.Bar(name="Sustainability", x=plot_df["fabric_name"], y=plot_df["sustainability_score"], marker_color="#10b981"))
+    fig_bars.add_trace(go.Bar(name="Climate Fit", x=plot_df["fabric_name"], y=plot_df["climate_score"], marker_color="#34d399"))
+    fig_bars.add_trace(go.Bar(name="Comfort", x=plot_df["fabric_name"], y=plot_df["comfort_score"], marker_color="#38bdf8"))
+    fig_bars.add_trace(go.Bar(name="Durability", x=plot_df["fabric_name"], y=plot_df["durability_score"], marker_color="#fbbf24"))
+    fig_bars.add_trace(go.Bar(name="Affordability", x=plot_df["fabric_name"], y=plot_df["cost_score"], marker_color="#f472b6"))
+    fig_bars.add_trace(go.Bar(name="Performance", x=plot_df["fabric_name"], y=plot_df["performance_score"], marker_color="#a78bfa"))
 
     fig_bars.update_layout(
+        template="plotly_dark",
         barmode="group",
         xaxis_title="Fabric",
         yaxis_title="Score (0-100)",
@@ -549,11 +791,11 @@ with tabs[2]:
     st.plotly_chart(fig_bars, use_container_width=True)
 
 # ==============================================================================
-# TAB 4: FABRIC COMPARISON (RADAR & METRICS)
+# TAB 4: FABRIC COMPARISON (CLEAN TABLE & RADAR)
 # ==============================================================================
 with tabs[3]:
     st.markdown("### ⚖️ Side-by-Side Fabric Comparison")
-    st.caption("Compare trade-offs across multiple textiles with interactive radar charts.")
+    st.caption("Compare trade-offs across multiple textiles with clean matrix tables and interactive radar charts.")
 
     all_fabrics = engine.get_all_fabrics()
     fabric_names = all_fabrics["fabric_name"].tolist()
@@ -575,84 +817,95 @@ with tabs[3]:
     else:
         compare_df = all_fabrics[all_fabrics["fabric_name"].isin(selected_compare)]
 
-        radar_categories = [
+        # Clean Structured Comparison Table matching requirement 8:
+        # Rows: Sustainability, Comfort, Durability, Breathability, Climate Fit, Cost, Overall Score
+        # Columns: Fabric A, Fabric B, ...
+        comp_metrics_rows = [
             "Sustainability",
-            "Water Efficiency",
-            "Low Carbon",
-            "Breathability",
             "Comfort",
             "Durability",
-            "Affordability",
-            "Moisture Mgmt",
+            "Breathability",
+            "Climate Fit (Moderate)",
+            "Cost (Affordability)",
+            "Composite Eco Score",
         ]
-
-        fig_radar = go.Figure()
-        colors = ["#2d6a4f", "#0077b6", "#e07a5f", "#9d4edd"]
-
-        for idx, (_, row) in enumerate(compare_df.iterrows()):
-            values = [
-                row["sustainability_score"],
-                row["water_efficiency"],
-                row["carbon_score"],
-                row["breathability"],
-                row["comfort"],
-                row["durability"],
-                row["affordability_score"],
-                row["moisture_management"],
+        
+        comp_table_data = {"Criterion": comp_metrics_rows}
+        for _, row in compare_df.iterrows():
+            f_name = row["fabric_name"]
+            comp_table_data[f_name] = [
+                f"{row['sustainability_score']}/100",
+                f"{row['comfort']}/100",
+                f"{row['durability']}/100",
+                f"{row['breathability']}/100",
+                f"{row.get('suitability_moderate', 75)}/100",
+                f"{row['affordability_score']}/100",
+                f"{row['sustainability_score']}/100",
             ]
-            # Close the polygon
-            values.append(values[0])
+        
+        clean_matrix_df = pd.DataFrame(comp_table_data)
 
-            fig_radar.add_trace(
-                go.Scatterpolar(
-                    r=values,
-                    theta=radar_categories + [radar_categories[0]],
-                    fill="toself",
-                    name=row["fabric_name"],
-                    line=dict(color=colors[idx % len(colors)]),
-                    opacity=0.6,
-                )
-            )
-
-        fig_radar.update_layout(
-            polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
-            showlegend=True,
-            legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="center", x=0.5),
-            margin=dict(l=40, r=40, t=40, b=40),
-            height=480,
-        )
-
-        col_rad, col_tbl = st.columns([1, 1])
-        with col_rad:
-            st.plotly_chart(fig_radar, use_container_width=True)
+        col_tbl, col_rad = st.columns([1, 1])
 
         with col_tbl:
-            st.markdown("#### Comparison Metrics Table")
-            display_cols = [
-                "fabric_name", "category", "origin_type", "sustainability_score",
-                "water_efficiency", "carbon_score", "comfort", "durability", "affordability_score"
-            ]
-            st.dataframe(
-                compare_df[display_cols].rename(columns={
-                    "fabric_name": "Fabric",
-                    "category": "Category",
-                    "origin_type": "Origin",
-                    "sustainability_score": "Sust",
-                    "water_efficiency": "Water Eff",
-                    "carbon_score": "Carbon",
-                    "comfort": "Comfort",
-                    "durability": "Durability",
-                    "affordability_score": "Afford",
-                }),
-                use_container_width=True,
-                hide_index=True,
-            )
+            st.markdown("#### Direct Parameter Comparison Matrix")
+            st.dataframe(clean_matrix_df, use_container_width=True, hide_index=True)
 
             st.markdown("#### Advantages & Limitations")
             for _, r in compare_df.iterrows():
                 st.markdown(f"**{r['fabric_name']}:**")
                 st.markdown(f"- *Advantages:* {r['advantages']}")
                 st.markdown(f"- *Limitations:* {r['limitations']}")
+
+        with col_rad:
+            st.markdown("#### Visual Radar Analysis")
+            radar_categories = [
+                "Sustainability",
+                "Water Efficiency",
+                "Low Carbon",
+                "Breathability",
+                "Comfort",
+                "Durability",
+                "Affordability",
+                "Moisture Mgmt",
+            ]
+
+            fig_radar = go.Figure()
+            colors = ["#10b981", "#38bdf8", "#fbbf24", "#f472b6"]
+
+            for idx, (_, row) in enumerate(compare_df.iterrows()):
+                values = [
+                    row["sustainability_score"],
+                    row["water_efficiency"],
+                    row["carbon_score"],
+                    row["breathability"],
+                    row["comfort"],
+                    row["durability"],
+                    row["affordability_score"],
+                    row["moisture_management"],
+                ]
+                values.append(values[0])
+
+                fig_radar.add_trace(
+                    go.Scatterpolar(
+                        r=values,
+                        theta=radar_categories + [radar_categories[0]],
+                        fill="toself",
+                        name=row["fabric_name"],
+                        line=dict(color=colors[idx % len(colors)]),
+                        opacity=0.55,
+                    )
+                )
+
+            fig_radar.update_layout(
+                template="plotly_dark",
+                polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
+                showlegend=True,
+                legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="center", x=0.5),
+                margin=dict(l=30, r=30, t=30, b=30),
+                height=420,
+            )
+            st.plotly_chart(fig_radar, use_container_width=True)
 
 # ==============================================================================
 # TAB 5: SUSTAINABILITY HUB
@@ -662,16 +915,37 @@ with tabs[4]:
     st.markdown(
         """
         > [!IMPORTANT]
-        > **Sustainability is Never a Single Metric:** A fabric that scores high in biodegradability (like conventional cotton) might severely deplete fresh water supplies and require heavy agrochemicals. Synthetics like recycled polyester conserve water, but shed non-biodegradable microfibers. Our system captures this complete lifecycle footprint.
+        > **Sustainability is Multi-Dimensional:** Evaluating textiles solely on a single factor (like biodegradability) leads to trade-off blindspots. Conventional cotton decomposes naturally, but requires massive freshwater irrigation and pesticides. Recycled polyester preserves bottles from landfills, but sheds persistent synthetic microplastics. Our system tracks the multi-dimensional lifecycle footprint.
         """
     )
 
     fab_df = engine.get_all_fabrics()
 
+    # Fabric Dimensions Deep Dive Table
+    st.markdown("#### 🔬 Detailed Fabric Sustainability Dimensions")
+    st.caption("Data derived from lifecycle assessments (LCAs). Non-tracked criteria are accurately flagged as unavailable.")
+
+    hub_rows = []
+    for _, r in fab_df.iterrows():
+        hub_rows.append({
+            "Fabric": r["fabric_name"],
+            "Origin Category": r["category"],
+            "Sustainability Score": f"{r['sustainability_score']} / 100",
+            "🌍 Carbon Impact": f"{r['carbon_score']} / 100",
+            "💧 Water Impact": f"{r['water_efficiency']} / 100",
+            "♻️ Recyclability": f"{r['recyclability']} / 100",
+            "🌱 Biodegradability": f"{r['biodegradability']} / 100",
+            "⚡ Energy Impact": "Data unavailable",
+            "🧪 Chemical Processing": "Data unavailable",
+        })
+
+    hub_df = pd.DataFrame(hub_rows)
+    st.dataframe(hub_df, use_container_width=True, hide_index=True)
+
     col_s1, col_s2 = st.columns([3, 2])
 
     with col_s1:
-        st.markdown("#### 🔬 Sustainability vs. Affordability Trade-off")
+        st.markdown("#### 📈 Sustainability vs. Affordability Trade-off Landscape")
         fig_scatter = px.scatter(
             fab_df,
             x="affordability_score",
@@ -686,17 +960,20 @@ with tabs[4]:
                 "origin_type": "Origin Type",
                 "durability": "Durability",
             },
-            title="Textile Landscape: Eco-Impact vs. Accessibility (Bubble size = Durability)",
-            color_discrete_map={"Natural": "#2d6a4f", "Regenerated": "#0077b6", "Synthetic": "#e07a5f"},
+            color_discrete_map={"Natural": "#10b981", "Regenerated": "#38bdf8", "Synthetic": "#fbbf24"},
         )
         fig_scatter.update_traces(textposition="top center")
-        fig_scatter.update_layout(height=480, margin=dict(l=20, r=20, t=40, b=20))
+        fig_scatter.update_layout(
+            template="plotly_dark",
+            height=440,
+            margin=dict(l=20, r=20, t=30, b=20),
+        )
         st.plotly_chart(fig_scatter, use_container_width=True)
 
     with col_s2:
-        st.markdown("#### 🌍 Environmental Impact Dimensions")
+        st.markdown("#### 📊 Rank Fabrics by Dimension")
         metric_choice = st.selectbox(
-            "Select Environmental Dimension to Rank",
+            "Select Dimension to Rank",
             ["water_efficiency", "carbon_score", "recyclability", "biodegradability", "sustainability_score"],
             format_func=lambda x: {
                 "water_efficiency": "💧 Water Efficiency & Conservation",
@@ -716,9 +993,13 @@ with tabs[4]:
             color=metric_choice,
             color_continuous_scale="Greens",
             labels={metric_choice: "Score (0-100)", "fabric_name": "Fabric"},
-            height=480,
+            height=440,
         )
-        fig_dim.update_layout(margin=dict(l=20, r=20, t=20, b=20), coloraxis_showscale=False)
+        fig_dim.update_layout(
+            template="plotly_dark",
+            margin=dict(l=20, r=20, t=20, b=20),
+            coloraxis_showscale=False,
+        )
         st.plotly_chart(fig_dim, use_container_width=True)
 
 # ==============================================================================
@@ -730,9 +1011,9 @@ with tabs[5]:
         """
         Our personalization engine applies an adaptive Bayesian-inspired learning formula:
         $$\\text{Final Score} = (1 - \\alpha) \\times \\text{General Recommendation Score} + \\alpha \\times \\text{User Preference Score}$$
-        - **Initial State ($\alpha = 0.0$):** Pure general recommendation engine.
-        - **Ramp-Up ($\alpha = 0.15$ after 1 interaction):** Begins capturing user affinity.
-        - **Full Adaptation ($\alpha = 0.30$ after 2+ interactions):** 70% General + 30% Personalized Preference score.
+        - **Initial State ($\alpha = 0.0$):** 100% general recommendation engine.
+        - **Ramp-Up ($\alpha = 0.15$ after 1 interaction):** 85% General + 15% User Preference.
+        - **Full Adaptation ($\alpha = 0.30$ after 2+ interactions):** 70% General + 30% User Preference score.
         """
     )
 
@@ -742,7 +1023,7 @@ with tabs[5]:
     m1.metric("Past Interactions", prof["interaction_count"])
     m2.metric("Personalization Weight (α)", f"{int(prof['learning_weight'] * 100)}%")
     m3.metric("Avg Given Rating", f"{prof['avg_rating']} ⭐" if prof['avg_rating'] > 0 else "N/A")
-    m4.metric("Learning Status", "Active" if prof["has_sufficient_history"] else "Collecting Data")
+    m4.metric("Learning Status", "Active (30%)" if prof["has_sufficient_history"] else ("Ramping (15%)" if prof["interaction_count"] == 1 else "Collecting Data (0%)"))
 
     st.markdown("---")
 
@@ -766,7 +1047,7 @@ with tabs[5]:
                 color_continuous_scale="Viridis",
                 range_x=[0, 100],
             )
-            fig_aff.update_layout(height=320, margin=dict(l=20, r=20, t=20, b=20))
+            fig_aff.update_layout(template="plotly_dark", height=320, margin=dict(l=20, r=20, t=20, b=20))
             st.plotly_chart(fig_aff, use_container_width=True)
 
     with col_aff2:
@@ -809,7 +1090,7 @@ with tabs[6]:
             rating_counts = all_fb["rating"].value_counts().reset_index()
             rating_counts.columns = ["Rating", "Count"]
             fig_ratings = px.bar(rating_counts, x="Rating", y="Count", color="Rating", color_continuous_scale="Greens")
-            fig_ratings.update_layout(height=280, margin=dict(l=20, r=20, t=20, b=20))
+            fig_ratings.update_layout(template="plotly_dark", height=280, margin=dict(l=20, r=20, t=20, b=20))
             st.plotly_chart(fig_ratings, use_container_width=True)
 
         with col_fb2:
@@ -817,42 +1098,70 @@ with tabs[6]:
             chosen_counts = all_fb["selected_fabric"].value_counts().reset_index()
             chosen_counts.columns = ["Fabric", "Selections"]
             fig_chosen = px.pie(chosen_counts, values="Selections", names="Fabric", hole=0.4, color_discrete_sequence=px.colors.qualitative.Pastel)
-            fig_chosen.update_layout(height=280, margin=dict(l=20, r=20, t=20, b=20))
+            fig_chosen.update_layout(template="plotly_dark", height=280, margin=dict(l=20, r=20, t=20, b=20))
             st.plotly_chart(fig_chosen, use_container_width=True)
 
 # ==============================================================================
-# TAB 8: METHODOLOGY & ABOUT
+# TAB 8: METHODOLOGY & RECOMMENDATION PIPELINE
 # ==============================================================================
 with tabs[7]:
-    st.markdown("### ℹ️ About & Scientific Methodology")
+    st.markdown("### ℹ️ Methodology & Recommendation Pipeline")
     st.markdown(
         """
         #### Project Overview
         - **Project Title:** Smart Fabric Recommendation System
         - **Track:** Track 1 — FUTURE FABRIC
         - **Objective:** An intelligent, explainable, personalized decision-support engine assisting designers, brands, and conscious consumers to choose the most sustainable and functionally appropriate fabric for any garment.
+        """
+    )
 
-        #### Multi-Criteria Decision Analysis (MCDA) Scoring Model
+    st.markdown("#### 🔄 Visual Recommendation Pipeline")
+    st.caption("Step-by-step decision architecture evaluated for every recommendation request:")
+
+    steps = [
+        ("1. User Inputs", "Collects garment type, climate conditions, budget, sustainability, comfort, and durability priorities."),
+        ("2. Garment Compatibility Filter", "Pre-filters fabrics against garment_compatibility.csv to eliminate unviable candidates."),
+        ("3. Climate Suitability Evaluation", "Maps ambient conditions (Hot, Humid, Moderate, Cold, Rainy) to empirical thermal regulation."),
+        ("4. Sustainability Evaluation", "Calculates composite footprint across water conservation, carbon footprint, recyclability, and biodegradability."),
+        ("5. User Preference Weighting", "Dynamically re-normalizes criteria weights based on user priority sliders so weights strictly sum to 1.0."),
+        ("6. Multi-Criteria Ranking (MCDA)", "Computes multi-attribute general utility scores and ranks fabrics descending."),
+        ("7. Best Match & Runner-Up Identification", "Extracts the #1 Best Match, runner-up alternative, and secondary candidates."),
+        ("8. Explainable AI (XAI) Synthesis", "Generates human-readable 'Why this fabric?' rationale and head-to-head trade-off analysis."),
+        ("9. User Feedback Logging", "Captures user rating (1-5 stars) and acceptance decision in local SQLite database."),
+        ("10. Personalized Profile Update", "Updates user fabric affinity and ramps personalization blending weight (up to 70% General + 30% User Preference)."),
+    ]
+
+    for title, desc in steps:
+        st.markdown(
+            f"""
+            <div class='pipeline-step'>
+                <b style='color: #34d399;'>{title}</b>
+                <p style='color: #cbd5e1; margin: 3px 0 0 0; font-size: 0.88rem;'>{desc}</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        #### Mathematical Scoring Model
         Recommendations are computed via a dynamically weighted utility function:
 
         $$\\text{Score}_{\\text{general}} = \\sum_{i} w_i \\cdot S_i$$
 
         Where criteria $S_i$ include:
-        1. **Sustainability Score ($w_1 = 30\\%$ baseline):** Multi-dimensional composite of water efficiency, low carbon footprint, recyclability, and natural biodegradability.
-        2. **Climate Suitability ($w_2 = 20\\%$ baseline):** Empirical temperature and humidity regulation index for the target climate.
-        3. **Comfort & Breathability ($w_3 = 15\\%$ baseline):** Tactile skin feel, softness, and air permeability.
-        4. **Durability ($w_4 = 15\\%$ baseline):** Tensile strength, friction resistance, and laundering longevity.
-        5. **Affordability / Cost Friendliness ($w_5 = 10\\%$ baseline):** Normalized cost tier.
-        6. **Performance Requirement ($w_6 = 10\\%$ baseline):** Specific functional goals (e.g. moisture wicking for activewear, thermal insulation for winter).
+        1. **Garment Compatibility:** Empirical structural suitability for target clothing item.
+        2. **Climate Suitability ($w_{\\text{climate}} = 20\\%$ baseline):** Temperature and humidity regulation index.
+        3. **Sustainability Score ($w_{\\text{sust}} = 30\\%$ baseline):** Composite of water efficiency, low carbon footprint, recyclability, and biodegradability.
+        4. **Comfort & Breathability ($w_{\\text{comf}} = 15\\%$ baseline):** Softness, skin feel, and airflow.
+        5. **Durability ($w_{\\text{dur}} = 15\\%$ baseline):** Tensile strength and laundering resistance.
+        6. **Cost / Affordability ($w_{\\text{cost}} = 10\\%$ baseline):** Normalized price tier.
+        7. **Performance Requirement ($w_{\\text{perf}} = 10\\%$ baseline):** Moisture wicking, stretch, or thermal insulation.
 
-        Dynamic user priority multipliers adjust individual weights, which are strictly re-normalized such that $\\sum w_i = 1.0$.
-
-        #### Personalization & Adaptive Feedback Loop
-        User feedback captured in SQLite is used to compute historical fabric and category affinity. When $\\ge 2$ interactions exist, the score blends according to:
-
-        $$\\text{Score}_{\\text{final}} = 0.70 \\times \\text{Score}_{\\text{general}} + 0.30 \\times \\text{Score}_{\\text{user preference}}$$
-
-        #### Data Governance & Disclaimer
-        The numerical scores (0–100) are normalized demonstration benchmarks derived from synthesized life cycle assessments (LCAs), the Higg Materials Sustainability Index (MSI), and Textile Exchange material summaries. They are intended for demonstration and comparative decision-support.
+        #### Personalization Blending Formula
+        When feedback is logged in SQLite:
+        $$\\text{Score}_{\\text{final}} = (1 - \\alpha) \\times \\text{Score}_{\\text{general}} + \\alpha \\times \\text{Score}_{\\text{user preference}}$$
+        where $\\alpha = 0.30$ ($70\\% / 30\\%$) once sufficient interaction history is established.
         """
     )
