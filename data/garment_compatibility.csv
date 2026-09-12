@@ -1,0 +1,102 @@
+garment_type,fabric_id,compatibility_score,is_compatible,suitability_notes
+T-shirt,FAB_01,98,1,Optimal comfort and breathability for everyday t-shirts
+T-shirt,FAB_02,90,1,Standard casual t-shirt fabric; high availability
+T-shirt,FAB_03,82,1,Superb lightweight summer tee; relaxed drape
+T-shirt,FAB_04,78,1,Durable hemp blend tee; soften with washing
+T-shirt,FAB_05,95,1,Luxurious drape and silky hand-feel
+T-shirt,FAB_06,94,1,Ultra-soft and form-flattering loungewear tee
+T-shirt,FAB_07,90,1,Soft and antibacterial jersey knit
+T-shirt,FAB_08,70,1,Performance athletic t-shirt
+T-shirt,FAB_09,65,1,Budget synthetic workout t-shirt
+T-shirt,FAB_14,88,1,Eco-conscious circular casual tee
+T-shirt,FAB_15,75,1,Breezy lightweight summer knit
+T-shirt,FAB_17,80,1,Crisp and sustainable bio-fiber tee
+T-shirt,FAB_18,92,1,Soothing antioxidant-rich wellness t-shirt
+Shirt,FAB_01,95,1,Classic comfortable everyday woven button-down
+Shirt,FAB_02,90,1,Standard dress and casual cotton shirt
+Shirt,FAB_03,98,1,Timeless resort and summer linen button-down
+Shirt,FAB_04,85,1,Structured durable casual overshirt
+Shirt,FAB_05,94,1,Fluid drape and wrinkle-resistant luxury shirt
+Shirt,FAB_06,88,1,Flowing lightweight casual button-up
+Shirt,FAB_07,85,1,Silky breathable woven shirt
+Shirt,FAB_13,92,1,High-end evening and formal silk shirt
+Shirt,FAB_15,92,1,Textured lightweight breezy summer shirt
+Shirt,FAB_17,88,1,Strong eco-conscious woven shirt
+Shirt,FAB_22,94,1,Exquisite ethical silk formal shirt
+Jeans,FAB_04,90,1,Extra heavy-duty sustainable hemp denim
+Jeans,FAB_20,98,1,Authentic recycled circular denim jeans
+Jeans,FAB_01,88,1,Soft organic cotton twill denim
+Jeans,FAB_02,92,1,Standard rugged conventional cotton jeans
+Jeans,FAB_14,86,1,Recycled content sustainable jeans
+Trousers,FAB_01,88,1,Comfortable chinos and casual trousers
+Trousers,FAB_03,95,1,Classic breathable Mediterranean summer trousers
+Trousers,FAB_04,90,1,Hardwearing utility trousers and workwear
+Trousers,FAB_05,86,1,Sophisticated fluid drape wide-leg trousers
+Trousers,FAB_11,94,1,Classic winter tailored wool trousers
+Trousers,FAB_12,92,1,Sustainable warm tailored trousers
+Trousers,FAB_15,88,1,Crisp airy tailored warm-weather trousers
+Dress,FAB_01,88,1,Casual everyday sundress
+Dress,FAB_03,92,1,Effortless breathable summer linen dress
+Dress,FAB_05,98,1,Elegant drape and smooth silhouette dress
+Dress,FAB_06,94,1,Figure-skimming lightweight knit dress
+Dress,FAB_07,90,1,Soft fluid maxi dress
+Dress,FAB_13,96,1,Luxurious evening gown and cocktail dress
+Dress,FAB_15,88,1,Textured natural summer shift dress
+Dress,FAB_17,90,1,Breezy structured bio-fiber dress
+Dress,FAB_18,88,1,Nourishing spa loungewear dress
+Dress,FAB_22,98,1,Ethical bridal and luxury evening dress
+Saree,FAB_13,98,1,Traditional pure silk saree with opulent luster
+Saree,FAB_22,99,1,Ahimsa non-violent organic silk luxury saree
+Saree,FAB_01,90,1,Traditional handloom cotton daily saree
+Saree,FAB_03,88,1,Sophisticated minimalist linen saree
+Saree,FAB_05,92,1,Smooth contemporary drape modal/tencel saree
+Saree,FAB_17,86,1,Handcrafted natural banana fiber eco-saree
+Sportswear,FAB_08,98,1,Premier quick-dry moisture-wicking athletic wear
+Sportswear,FAB_10,95,1,High compression tough yoga leggings and shorts
+Sportswear,FAB_05,82,1,Naturally breathable activewear tops
+Sportswear,FAB_07,78,1,Anti-odor lightweight gym shirt
+Sportswear,FAB_09,82,1,Budget technical running apparel
+Sportswear,FAB_18,88,1,Skin-friendly recovery and activewear
+Sportswear,FAB_21,80,1,High elasticity budget performance tights
+Jacket,FAB_11,96,1,Iconic warm tailored wool blazer and overcoat
+Jacket,FAB_12,98,1,Sustainable recycled wool winter coat
+Jacket,FAB_19,92,1,Cruelty-free bio-leather biker or aviator jacket
+Jacket,FAB_20,90,1,Timeless rugged denim trucker jacket
+Jacket,FAB_04,86,1,Heavyweight chore coat or field jacket
+Jacket,FAB_08,88,1,Technical fleece and softshell jacket
+Jacket,FAB_10,90,1,Weather-resistant rain shell jacket
+Jacket,FAB_16,75,1,Rustic rugged outer work jacket
+Hoodie,FAB_01,96,1,Ultra-cozy organic fleece hoodie
+Hoodie,FAB_02,90,1,Classic cotton fleece pullover hoodie
+Hoodie,FAB_14,92,1,Low-impact recycled cotton sweatshirt
+Hoodie,FAB_08,86,1,Athletic performance fleece hoodie
+Hoodie,FAB_07,82,1,Silky breathable lightweight hoodie
+Hoodie,FAB_12,85,1,Heavy warm knitted wool hoodie
+Children's wear,FAB_01,99,1,Gentle hypoallergenic non-toxic fabric for sensitive baby skin
+Children's wear,FAB_06,94,1,Buttery soft and non-irritating baby rompers
+Children's wear,FAB_07,92,1,Soft and breathable kids playwear
+Children's wear,FAB_05,92,1,Smooth durable non-abrasive kids clothing
+Children's wear,FAB_14,85,1,Sustainable casual kids t-shirts
+Children's wear,FAB_18,95,1,Skin-nourishing soothing fabric for infants
+Formal wear,FAB_11,98,1,Premier tailored suit and formal blazer
+Formal wear,FAB_12,94,1,Sustainable sharp tailored business suit
+Formal wear,FAB_13,96,1,Evening formalwear; silk ties; cocktail dresses
+Formal wear,FAB_22,98,1,Prestige ethical black-tie attire
+Formal wear,FAB_03,88,1,Summer formal suits and blazers
+Formal wear,FAB_05,90,1,Modern refined fluid formal dresses and shirts
+Formal wear,FAB_01,86,1,Tailored crisp cotton formal dress shirts
+Summer wear,FAB_03,99,1,Ultimate heat and humidity dissipation
+Summer wear,FAB_15,96,1,Coolest high-breathability natural fiber
+Summer wear,FAB_05,95,1,High moisture absorption and silky cool touch
+Summer wear,FAB_01,92,1,Lightweight airy organic cotton
+Summer wear,FAB_17,90,1,Porous cooling natural plant fiber
+Summer wear,FAB_06,88,1,Lightweight soft breathable drape
+Summer wear,FAB_07,85,1,Naturally cool cellulose fiber
+Summer wear,FAB_04,82,1,Air-permeable natural hemp
+Summer wear,FAB_18,88,1,Cool soothing skin recovery fabric
+Winter wear,FAB_11,99,1,Supreme natural heat retention and insulation
+Winter wear,FAB_12,98,1,Low-impact heavy winter insulation
+Winter wear,FAB_08,90,1,Warm thermal fleece and insulated jackets
+Winter wear,FAB_10,88,1,Wind and snow shell outerwear
+Winter wear,FAB_20,80,1,Heavy lined winter denim
+Winter wear,FAB_04,78,1,Heavy canvas cold protection
