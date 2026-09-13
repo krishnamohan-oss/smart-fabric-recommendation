@@ -2,6 +2,8 @@
 
 > **Track 1 — FUTURE FABRIC | Hackathon Ready AI Decision-Support Platform**
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/krishnamohan-oss/smart-fabric-recommendation)
+
 An intelligent, multi-criteria, and explainable AI decision-support platform that recommends sustainable and functionally optimal fabrics for diverse garments and climates. By balancing ecological footprint, thermal comfort, physical durability, athletic performance, affordability, and adaptive user personalization, the system bridges the gap between textile sustainability and garment practicality.
 
 ---
