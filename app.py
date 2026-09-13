@@ -5,6 +5,38 @@ A multi-criteria, explainable, personalized decision-support platform for sustai
 """
 
 import os
+import sys
+import subprocess
+
+# Ensure current script directory and project root are in sys.path
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
+
+# Fallback: if running from an external folder, add project workspace if available
+WORKSPACE_DIR = r"C:\Users\krish\OneDrive\smart fabric recommendation"
+if os.path.exists(WORKSPACE_DIR) and WORKSPACE_DIR not in sys.path:
+    sys.path.insert(0, WORKSPACE_DIR)
+
+# Auto-redirect to Streamlit if executed directly via "python app.py" or VS Code "Run Code"
+try:
+    from streamlit.runtime.scriptrunner import get_script_run_ctx
+    if get_script_run_ctx() is None:
+        import webbrowser
+        import threading
+        print("\n" + "=" * 68)
+        print("  🌿 Smart Fabric Recommendation System is Starting...")
+        print("  🚀 Opening your browser automatically at: http://localhost:8501")
+        print("  💡 NOTE: Streamlit is a LIVE WEB SERVER (not a short CLI script).")
+        print("     It will stay '[Running]' so you can interact with the app in your browser.")
+        print("     Press Ctrl+C in terminal when you wish to stop.")
+        print("=" * 68 + "\n")
+        threading.Timer(1.2, lambda: webbrowser.open("http://localhost:8501")).start()
+        subprocess.run([sys.executable, "-m", "streamlit", "run", os.path.abspath(__file__)])
+        sys.exit(0)
+except Exception:
+    pass
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -30,36 +62,107 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom Professional Dark & Emerald Theme CSS
+# ==============================================================================
+# BACKGROUND THEME ENGINE & STYLING PRESETS
+# ==============================================================================
+THEME_PRESETS = {
+    "🌌 Cyber Emerald Aurora (Default)": {
+        "bg_css": (
+            "radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.18) 0%, transparent 45%), "
+            "radial-gradient(circle at 85% 18%, rgba(56, 189, 248, 0.14) 0%, transparent 45%), "
+            "radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.11) 0%, transparent 50%), "
+            "radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.10) 0%, transparent 40%), "
+            "linear-gradient(180deg, #070b14 0%, #0d1527 50%, #05080f 100%)"
+        ),
+        "sidebar_bg": "linear-gradient(180deg, rgba(13, 21, 39, 0.96) 0%, rgba(7, 11, 22, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.82) 0%, rgba(15, 23, 42, 0.88) 100%)",
+        "accent": "#10b981",
+        "accent_glow": "rgba(16, 185, 129, 0.22)",
+    },
+    "🧵 Deep Textile Weave": {
+        "bg_css": (
+            "radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 45%), "
+            "radial-gradient(circle at 80% 80%, rgba(52, 211, 153, 0.10) 0%, transparent 45%), "
+            "linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%), "
+            "linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%), "
+            "linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%), "
+            "linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%), "
+            "linear-gradient(180deg, #0a1120 0%, #060b14 100%)"
+        ),
+        "sidebar_bg": "linear-gradient(180deg, rgba(10, 17, 32, 0.96) 0%, rgba(6, 11, 20, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(26, 38, 57, 0.85) 0%, rgba(13, 20, 32, 0.90) 100%)",
+        "accent": "#34d399",
+        "accent_glow": "rgba(52, 211, 153, 0.22)",
+    },
+    "🖤 Midnight Obsidian (AMOLED)": {
+        "bg_css": (
+            "radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 60%), "
+            "radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.07) 0%, transparent 60%), "
+            "linear-gradient(180deg, #000000 0%, #04060a 100%)"
+        ),
+        "sidebar_bg": "linear-gradient(180deg, rgba(5, 7, 12, 0.98) 0%, #000000 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(18, 24, 34, 0.88) 0%, rgba(8, 12, 18, 0.95) 100%)",
+        "accent": "#10b981",
+        "accent_glow": "rgba(16, 185, 129, 0.25)",
+    },
+    "🌿 Botanical Forest Night": {
+        "bg_css": (
+            "radial-gradient(circle at 10% 20%, rgba(5, 150, 105, 0.22) 0%, transparent 50%), "
+            "radial-gradient(circle at 90% 80%, rgba(4, 120, 87, 0.16) 0%, transparent 50%), "
+            "radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.09) 0%, transparent 60%), "
+            "linear-gradient(180deg, #04100e 0%, #081a17 50%, #030a09 100%)"
+        ),
+        "sidebar_bg": "linear-gradient(180deg, rgba(6, 20, 17, 0.96) 0%, rgba(3, 10, 9, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(12, 34, 29, 0.85) 0%, rgba(6, 18, 15, 0.92) 100%)",
+        "accent": "#10b981",
+        "accent_glow": "rgba(16, 185, 129, 0.25)",
+    },
+}
+
+if "app_theme" not in st.session_state:
+    st.session_state["app_theme"] = "🌌 Cyber Emerald Aurora (Default)"
+
+active_theme = THEME_PRESETS.get(st.session_state["app_theme"], THEME_PRESETS["🌌 Cyber Emerald Aurora (Default)"])
+
+# Custom Professional Dark & Emerald Theme CSS with Dynamic Background
 st.markdown(
-    """
+    f"""
     <style>
-    /* Main Dark Theme Variables */
-    :root {
-        --bg-dark: #0f172a;
-        --card-dark: #1e293b;
-        --border-dark: #334155;
-        --text-light: #f8fafc;
-        --text-muted: #94a3b8;
-        --emerald: #10b981;
-        --emerald-dark: #065f46;
-        --emerald-light: #34d399;
-    }
+    /* Full Application Window Background */
+    .stApp {{
+        background: {active_theme['bg_css']} !important;
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        color: #f8fafc;
+    }}
+
+    /* Sidebar Glassmorphism */
+    [data-testid="stSidebar"] {{
+        background: {active_theme['sidebar_bg']} !important;
+        border-right: 1px solid rgba(51, 65, 85, 0.6) !important;
+        backdrop-filter: blur(14px) !important;
+    }}
+
+    /* Header Background */
+    [data-testid="stHeader"] {{
+        background: rgba(7, 11, 20, 0.6) !important;
+        backdrop-filter: blur(10px) !important;
+    }}
     
-    .main-title {
+    .main-title {{
         font-size: 2.3rem;
         font-weight: 800;
         color: #f8fafc;
         margin-bottom: 0.2rem;
-    }
+    }}
     
-    .subtitle {
+    .subtitle {{
         font-size: 1.05rem;
         color: #34d399;
         margin-bottom: 1.5rem;
-    }
+    }}
     
-    .trophy-badge {
+    .trophy-badge {{
         background: linear-gradient(135deg, #059669, #065f46);
         color: #ffffff;
         padding: 0.35rem 0.85rem;
@@ -68,9 +171,9 @@ st.markdown(
         font-size: 0.85rem;
         display: inline-block;
         margin-bottom: 0.5rem;
-    }
+    }}
 
-    .confidence-badge {
+    .confidence-badge {{
         background: rgba(16, 185, 129, 0.15);
         color: #34d399;
         border: 1px solid #059669;
@@ -79,38 +182,51 @@ st.markdown(
         font-weight: 600;
         font-size: 0.8rem;
         display: inline-block;
-    }
+    }}
     
-    .top-match-card {
-        background-color: #1e293b;
-        border: 2px solid #10b981;
-        border-radius: 14px;
-        padding: 1.5rem;
-        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
-        margin-bottom: 1.5rem;
-        color: #f8fafc;
-    }
+    .top-match-card {{
+        background: {active_theme['card_bg']} !important;
+        border: 2px solid #10b981 !important;
+        border-radius: 16px !important;
+        padding: 1.5rem !important;
+        box-shadow: 0 12px 32px -4px {active_theme['accent_glow']}, 0 0 1px 1px rgba(255, 255, 255, 0.05) inset !important;
+        backdrop-filter: blur(12px) !important;
+        margin-bottom: 1.5rem !important;
+        color: #f8fafc !important;
+    }}
     
-    .alt-card {
-        background-color: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 12px;
-        padding: 1.2rem;
-        height: 100%;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        color: #f8fafc;
-    }
+    .alt-card {{
+        background: {active_theme['card_bg']} !important;
+        border: 1px solid rgba(51, 65, 85, 0.8) !important;
+        border-radius: 14px !important;
+        padding: 1.2rem !important;
+        height: 100% !important;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 1px 1px rgba(255, 255, 255, 0.04) inset !important;
+        backdrop-filter: blur(10px) !important;
+        color: #f8fafc !important;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+    }}
+    .alt-card:hover {{
+        transform: translateY(-2px);
+        border-color: #34d399 !important;
+        box-shadow: 0 12px 28px rgba(16, 185, 129, 0.2) !important;
+    }}
 
-    .stat-card {
-        background-color: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 12px;
-        padding: 14px 10px;
-        text-align: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+    .stat-card {{
+        background: {active_theme['card_bg']} !important;
+        border: 1px solid rgba(51, 65, 85, 0.8) !important;
+        border-radius: 12px !important;
+        padding: 14px 10px !important;
+        text-align: center !important;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 1px 1px rgba(255, 255, 255, 0.04) inset !important;
+        backdrop-filter: blur(8px) !important;
+        transition: transform 0.2s ease !important;
+    }}
+    .stat-card:hover {{
+        transform: translateY(-2px);
+    }}
     
-    .metric-pill {
+    .metric-pill {{
         display: inline-block;
         padding: 0.25rem 0.65rem;
         border-radius: 6px;
@@ -118,57 +234,70 @@ st.markdown(
         font-weight: 600;
         margin-right: 0.4rem;
         margin-bottom: 0.4rem;
-    }
-    .pill-green { background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
-    .pill-blue { background-color: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
-    .pill-orange { background-color: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }
+    }}
+    .pill-green {{ background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }}
+    .pill-blue {{ background-color: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }}
+    .pill-orange {{ background-color: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }}
     
-    .score-circle {
+    .score-circle {{
         font-size: 2.3rem;
         font-weight: 800;
         color: #34d399;
-    }
+    }}
 
-    .progress-row {
+    .progress-row {{
         margin-bottom: 10px;
-    }
-    .progress-header {
+    }}
+    .progress-header {{
         display: flex;
         justify-content: space-between;
         font-size: 0.86rem;
         font-weight: 600;
         color: #e2e8f0;
         margin-bottom: 3px;
-    }
-    .progress-bar-bg {
+    }}
+    .progress-bar-bg {{
         background: #334155;
         border-radius: 9999px;
         height: 9px;
         overflow: hidden;
-    }
-    .progress-bar-fill {
+    }}
+    .progress-bar-fill {{
         height: 100%;
         border-radius: 9999px;
         background: linear-gradient(90deg, #10b981, #34d399);
-    }
+    }}
     
-    .pipeline-step {
-        background-color: #1e293b;
-        border: 1px solid #334155;
-        border-left: 4px solid #10b981;
-        border-radius: 8px;
-        padding: 12px 16px;
-        margin-bottom: 8px;
-        color: #f8fafc;
-    }
+    .pipeline-step {{
+        background: {active_theme['card_bg']} !important;
+        border: 1px solid rgba(51, 65, 85, 0.8) !important;
+        border-left: 4px solid #10b981 !important;
+        border-radius: 10px !important;
+        padding: 12px 16px !important;
+        margin-bottom: 8px !important;
+        color: #f8fafc !important;
+        backdrop-filter: blur(8px) !important;
+    }}
     
-    .stTabs [data-baseweb="tab-list"] {
+    .stTabs [data-baseweb="tab-list"] {{
         gap: 8px;
-    }
-    .stTabs [data-baseweb="tab"] {
+        background: rgba(13, 21, 39, 0.7);
+        padding: 6px;
+        border-radius: 12px;
+        border: 1px solid rgba(51, 65, 85, 0.6);
+        backdrop-filter: blur(10px);
+    }}
+    .stTabs [data-baseweb="tab"] {{
         padding: 8px 16px;
         font-weight: 600;
-    }
+        border-radius: 8px;
+        color: #94a3b8;
+    }}
+    .stTabs [aria-selected="true"] {{
+        background: rgba(16, 185, 129, 0.22) !important;
+        color: #34d399 !important;
+        border: 1px solid rgba(16, 185, 129, 0.45) !important;
+    }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -182,6 +311,15 @@ def get_engine():
 
 
 engine = get_engine()
+
+
+@st.cache_data(show_spinner=False)
+def load_zip_bytes(file_path: str) -> bytes:
+    """Cache zip bytes in memory to avoid repetitive disk I/O on reruns."""
+    if file_path and os.path.exists(file_path):
+        with open(file_path, "rb") as fp:
+            return fp.read()
+    return b""
 
 # ==============================================================================
 # SIDEBAR SETUP (High-Contrast Dark Aesthetic & Personalization Summary)
@@ -200,14 +338,13 @@ with st.sidebar:
     if not os.path.exists(zip_path):
         zip_path = os.path.join(os.path.dirname(__file__), "smart-fabric-recommendation.zip")
     if os.path.exists(zip_path):
-        with open(zip_path, "rb") as fp:
-            st.download_button(
-                label="📦 Download Project (ZIP)",
-                data=fp.read(),
-                file_name="smart-fabric-recommendation.zip",
-                mime="application/zip",
-                use_container_width=True,
-            )
+        st.download_button(
+            label="📦 Download Project (ZIP)",
+            data=load_zip_bytes(zip_path),
+            file_name="smart-fabric-recommendation.zip",
+            mime="application/zip",
+            use_container_width=True,
+        )
 
     st.markdown("---")
     st.subheader("👤 User Profile Session")
@@ -270,6 +407,18 @@ with st.sidebar:
         st.rerun()
 
     st.markdown("---")
+    st.subheader("🎨 Background Atmosphere")
+    chosen_theme_name = st.selectbox(
+        "Theme Style",
+        list(THEME_PRESETS.keys()),
+        index=list(THEME_PRESETS.keys()).index(st.session_state.get("app_theme", "🌌 Cyber Emerald Aurora (Default)")),
+        help="Instantly switch the background aesthetic across the entire project.",
+    )
+    if chosen_theme_name != st.session_state.get("app_theme"):
+        st.session_state["app_theme"] = chosen_theme_name
+        st.rerun()
+
+    st.markdown("---")
     st.subheader("⚙️ Optional AI Assistant")
     gemini_key = st.text_input(
         "Gemini API Key (Optional)",
@@ -318,15 +467,14 @@ with tabs[0]:
 
     # Download banner
     if os.path.exists(zip_path):
-        with open(zip_path, "rb") as fp:
-            st.download_button(
-                label="⬇️ Click Here to Download Complete Project (.ZIP Archive)",
-                data=fp.read(),
-                file_name="smart-fabric-recommendation.zip",
-                mime="application/zip",
-                type="primary",
-                use_container_width=True,
-            )
+        st.download_button(
+            label="⬇️ Click Here to Download Complete Project (.ZIP Archive)",
+            data=load_zip_bytes(zip_path),
+            file_name="smart-fabric-recommendation.zip",
+            mime="application/zip",
+            type="primary",
+            use_container_width=True,
+        )
         st.markdown("<br>", unsafe_allow_html=True)
 
     col_hero1, col_hero2 = st.columns([3, 2])
@@ -781,6 +929,8 @@ with tabs[2]:
 
     fig_bars.update_layout(
         template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
         barmode="group",
         xaxis_title="Fabric",
         yaxis_title="Score (0-100)",
@@ -899,7 +1049,12 @@ with tabs[3]:
 
             fig_radar.update_layout(
                 template="plotly_dark",
-                polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                polar=dict(
+                    radialaxis=dict(visible=True, range=[0, 100]),
+                    bgcolor="rgba(15, 23, 42, 0.45)",
+                ),
                 showlegend=True,
                 legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="center", x=0.5),
                 margin=dict(l=30, r=30, t=30, b=30),
@@ -965,6 +1120,8 @@ with tabs[4]:
         fig_scatter.update_traces(textposition="top center")
         fig_scatter.update_layout(
             template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             height=440,
             margin=dict(l=20, r=20, t=30, b=20),
         )
@@ -997,6 +1154,8 @@ with tabs[4]:
         )
         fig_dim.update_layout(
             template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             margin=dict(l=20, r=20, t=20, b=20),
             coloraxis_showscale=False,
         )
@@ -1047,7 +1206,13 @@ with tabs[5]:
                 color_continuous_scale="Viridis",
                 range_x=[0, 100],
             )
-            fig_aff.update_layout(template="plotly_dark", height=320, margin=dict(l=20, r=20, t=20, b=20))
+            fig_aff.update_layout(
+                template="plotly_dark",
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                height=320,
+                margin=dict(l=20, r=20, t=20, b=20),
+            )
             st.plotly_chart(fig_aff, use_container_width=True)
 
     with col_aff2:

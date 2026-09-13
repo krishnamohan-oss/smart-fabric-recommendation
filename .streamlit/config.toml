@@ -1,13 +1,19 @@
+[browser]
+gatherUsageStats = false
+
 [server]
-headless = true
-address = "0.0.0.0"
+headless = false
+address = "localhost"
+port = 8501
+fileWatcherType = "none"
+runOnSave = false
 enableCORS = false
 enableXsrfProtection = false
 
 [theme]
 base = "dark"
 primaryColor = "#10b981"
-backgroundColor = "#0f172a"
-secondaryBackgroundColor = "#1e293b"
+backgroundColor = "#070b14"
+secondaryBackgroundColor = "#0d1527"
 textColor = "#f8fafc"
 font = "sans serif"
