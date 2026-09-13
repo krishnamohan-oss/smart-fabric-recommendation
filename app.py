@@ -66,116 +66,118 @@ st.set_page_config(
 # BACKGROUND THEME ENGINE & STYLING PRESETS
 # ==============================================================================
 THEME_PRESETS = {
-    "🌌 Cyber Emerald Aurora (Default)": {
+    "👗 Paris Haute Couture Runway (Catwalk Spotlight)": {
         "bg_css": (
-            "radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.20) 0%, transparent 45%), "
-            "radial-gradient(circle at 85% 18%, rgba(56, 189, 248, 0.16) 0%, transparent 45%), "
-            "radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.12) 0%, transparent 50%), "
-            "radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.11) 0%, transparent 40%), "
-            "radial-gradient(rgba(52, 211, 153, 0.08) 1px, transparent 1px), "
-            "linear-gradient(180deg, #060a12 0%, #0c1424 50%, #04070e 100%)"
+            "linear-gradient(135deg, rgba(15, 23, 42, 0.50) 0%, rgba(30, 41, 59, 0.40) 50%, rgba(15, 23, 42, 0.60) 100%), "
+            "url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=85')"
         ),
-        "bg_size": "cover, cover, cover, cover, 28px 28px, cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(12, 19, 36, 0.96) 0%, rgba(6, 10, 20, 0.98) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(28, 39, 58, 0.82) 0%, rgba(13, 20, 36, 0.88) 100%)",
+        "bg_size": "cover",
+        "sidebar_bg": "linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(10, 15, 26, 0.94) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.72) 0%, rgba(15, 23, 42, 0.78) 100%)",
         "accent": "#10b981",
-        "accent_glow": "rgba(16, 185, 129, 0.28)",
+        "accent_glow": "rgba(16, 185, 129, 0.40)",
     },
-    "⚡ Neo-Matrix Digital Fiber": {
+    "✨ Flowing Silk & Satin Drapes (Luxe Editorial)": {
         "bg_css": (
-            "radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.18) 0%, transparent 55%), "
-            "linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px), "
-            "linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px), "
-            "linear-gradient(180deg, #050b12 0%, #081420 50%, #03070c 100%)"
+            "linear-gradient(135deg, rgba(16, 24, 38, 0.48) 0%, rgba(30, 41, 59, 0.38) 50%, rgba(16, 24, 38, 0.58) 100%), "
+            "url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=1920&q=85')"
         ),
-        "bg_size": "cover, 32px 32px, 32px 32px, cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(6, 16, 26, 0.96) 0%, rgba(3, 8, 14, 0.98) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(16, 32, 48, 0.85) 0%, rgba(8, 18, 28, 0.92) 100%)",
+        "bg_size": "cover",
+        "sidebar_bg": "linear-gradient(180deg, rgba(16, 24, 38, 0.88) 0%, rgba(10, 15, 26, 0.94) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.72) 0%, rgba(16, 24, 38, 0.78) 100%)",
+        "accent": "#38bdf8",
+        "accent_glow": "rgba(56, 189, 248, 0.40)",
+    },
+    "🏛️ Milan Fashion Week Runway (Vogue Spotlight)": {
+        "bg_css": (
+            "linear-gradient(135deg, rgba(24, 20, 32, 0.48) 0%, rgba(40, 32, 55, 0.38) 50%, rgba(20, 16, 28, 0.58) 100%), "
+            "url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1920&q=85')"
+        ),
+        "bg_size": "cover",
+        "sidebar_bg": "linear-gradient(180deg, rgba(24, 20, 32, 0.88) 0%, rgba(15, 12, 22, 0.94) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(40, 32, 55, 0.72) 0%, rgba(24, 20, 32, 0.78) 100%)",
+        "accent": "#f43f5e",
+        "accent_glow": "rgba(244, 63, 94, 0.40)",
+    },
+    "🌿 Eco-Couture Botanical Studio (Sustainable Loom)": {
+        "bg_css": (
+            "linear-gradient(135deg, rgba(12, 26, 20, 0.48) 0%, rgba(20, 42, 32, 0.38) 50%, rgba(10, 22, 16, 0.58) 100%), "
+            "url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1920&q=85')"
+        ),
+        "bg_size": "cover",
+        "sidebar_bg": "linear-gradient(180deg, rgba(12, 26, 20, 0.88) 0%, rgba(8, 18, 14, 0.94) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(20, 42, 32, 0.72) 0%, rgba(12, 26, 20, 0.78) 100%)",
         "accent": "#34d399",
-        "accent_glow": "rgba(52, 211, 153, 0.28)",
+        "accent_glow": "rgba(52, 211, 153, 0.40)",
     },
-    "🧵 Haute Couture Carbon Weave": {
+    "👑 Paris Atelier & Bespoke Studio (Designer Workshop)": {
         "bg_css": (
-            "radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.16) 0%, transparent 45%), "
-            "linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%), "
-            "linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%), "
-            "linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.03) 75%), "
-            "linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.03) 75%), "
-            "linear-gradient(180deg, #090f1c 0%, #050912 100%)"
+            "linear-gradient(135deg, rgba(25, 22, 18, 0.48) 0%, rgba(42, 36, 28, 0.38) 50%, rgba(20, 18, 14, 0.58) 100%), "
+            "url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=85')"
         ),
-        "bg_size": "cover, 20px 20px, 20px 20px, 20px 20px, 20px 20px, cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(10, 16, 28, 0.96) 0%, rgba(5, 8, 16, 0.98) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(24, 34, 52, 0.85) 0%, rgba(11, 17, 28, 0.90) 100%)",
-        "accent": "#34d399",
-        "accent_glow": "rgba(52, 211, 153, 0.25)",
-    },
-    "🖤 Midnight Studio (AMOLED)": {
-        "bg_css": (
-            "radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.18) 0%, transparent 60%), "
-            "radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.08) 0%, transparent 60%), "
-            "linear-gradient(180deg, #000000 0%, #030508 100%)"
-        ),
-        "bg_size": "cover, cover, cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(5, 7, 10, 0.98) 0%, #000000 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(16, 22, 30, 0.90) 0%, rgba(6, 10, 14, 0.96) 100%)",
-        "accent": "#10b981",
-        "accent_glow": "rgba(16, 185, 129, 0.30)",
-    },
-    "🌿 Botanical Forest Canopy": {
-        "bg_css": (
-            "radial-gradient(circle at 10% 20%, rgba(5, 150, 105, 0.24) 0%, transparent 50%), "
-            "radial-gradient(circle at 90% 80%, rgba(4, 120, 87, 0.18) 0%, transparent 50%), "
-            "radial-gradient(rgba(16, 185, 129, 0.07) 1px, transparent 1px), "
-            "linear-gradient(180deg, #030e0c 0%, #071714 50%, #020807 100%)"
-        ),
-        "bg_size": "cover, cover, 26px 26px, cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(5, 18, 15, 0.96) 0%, rgba(2, 8, 7, 0.98) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(10, 30, 26, 0.85) 0%, rgba(5, 16, 13, 0.92) 100%)",
-        "accent": "#10b981",
-        "accent_glow": "rgba(16, 185, 129, 0.28)",
+        "bg_size": "cover",
+        "sidebar_bg": "linear-gradient(180deg, rgba(25, 22, 18, 0.88) 0%, rgba(16, 14, 11, 0.94) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(42, 36, 28, 0.72) 0%, rgba(25, 22, 18, 0.78) 100%)",
+        "accent": "#fbbf24",
+        "accent_glow": "rgba(251, 191, 36, 0.40)",
     },
 }
 
-if "app_theme" not in st.session_state:
-    st.session_state["app_theme"] = "🌌 Cyber Emerald Aurora (Default)"
+DEFAULT_THEME_KEY = "👗 Paris Haute Couture Runway (Catwalk Spotlight)"
 
-active_theme = THEME_PRESETS.get(st.session_state["app_theme"], THEME_PRESETS["🌌 Cyber Emerald Aurora (Default)"])
+if "app_theme" not in st.session_state or st.session_state["app_theme"] not in THEME_PRESETS:
+    st.session_state["app_theme"] = DEFAULT_THEME_KEY
 
-# Custom Professional Dark & Emerald Theme CSS with Real-time Design Elements
+active_theme = THEME_PRESETS.get(st.session_state["app_theme"], THEME_PRESETS[DEFAULT_THEME_KEY])
+
+# Custom Professional Fashion Aesthetic & Emerald Theme CSS with Real-time Design Elements
 st.markdown(
     f"""
     <style>
-    /* Full Application Window Background */
-    .stApp {{
+    /* Force outer & inner Streamlit containers to be transparent so the fashion visual shines through */
+    html, body, [data-testid="stAppViewContainer"], .main, [data-testid="stMainBlockContainer"], .block-container {{
+        background: transparent !important;
+        background-color: transparent !important;
+    }}
+
+    /* Full Application Window Fashion Runway Background */
+    .stApp, [data-testid="stAppViewContainer"] {{
         background: {active_theme['bg_css']} !important;
         background-attachment: fixed !important;
-        background-size: {active_theme['bg_size']} !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
         color: #f8fafc;
     }}
 
-    /* Sidebar Glassmorphism */
+    /* Sidebar Glassmorphism with Fashion Blur */
     [data-testid="stSidebar"] {{
         background: {active_theme['sidebar_bg']} !important;
-        border-right: 1px solid rgba(51, 65, 85, 0.6) !important;
-        backdrop-filter: blur(14px) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.14) !important;
+        backdrop-filter: blur(20px) !important;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.35) !important;
     }}
 
     /* Header Background */
     [data-testid="stHeader"] {{
-        background: rgba(6, 10, 18, 0.6) !important;
-        backdrop-filter: blur(10px) !important;
+        background: rgba(15, 23, 42, 0.45) !important;
+        backdrop-filter: blur(14px) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     }}
     
     .main-title {{
         font-size: 2.3rem;
         font-weight: 800;
-        color: #f8fafc;
+        color: #ffffff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
         margin-bottom: 0.2rem;
     }}
     
     .subtitle {{
         font-size: 1.05rem;
         color: #34d399;
+        font-weight: 600;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
         margin-bottom: 1.5rem;
     }}
     
@@ -240,11 +242,11 @@ st.markdown(
     
     .top-match-card {{
         background: {active_theme['card_bg']} !important;
-        border: 2px solid #10b981 !important;
+        border: 2px solid {active_theme['accent']} !important;
         border-radius: 16px !important;
         padding: 1.6rem !important;
-        box-shadow: 0 14px 34px -4px {active_theme['accent_glow']}, 0 0 1px 1px rgba(255, 255, 255, 0.06) inset !important;
-        backdrop-filter: blur(14px) !important;
+        box-shadow: 0 14px 34px -4px {active_theme['accent_glow']}, 0 0 1px 1px rgba(255, 255, 255, 0.1) inset !important;
+        backdrop-filter: blur(16px) saturate(160%) !important;
         margin-bottom: 1.5rem !important;
         color: #f8fafc !important;
         animation: glowBorder 4s infinite ease-in-out;
@@ -252,56 +254,58 @@ st.markdown(
     
     .alt-card {{
         background: {active_theme['card_bg']} !important;
-        border: 1px solid rgba(51, 65, 85, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
         border-radius: 14px !important;
         padding: 1.2rem !important;
         height: 100% !important;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 1px 1px rgba(255, 255, 255, 0.04) inset !important;
-        backdrop-filter: blur(10px) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset !important;
+        backdrop-filter: blur(14px) saturate(150%) !important;
         color: #f8fafc !important;
         transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
     }}
     .alt-card:hover {{
         transform: translateY(-3px);
-        border-color: #34d399 !important;
-        box-shadow: 0 12px 28px rgba(16, 185, 129, 0.22) !important;
+        border-color: {active_theme['accent']} !important;
+        box-shadow: 0 14px 32px {active_theme['accent_glow']} !important;
     }}
 
     .stat-card {{
         background: {active_theme['card_bg']} !important;
-        border: 1px solid rgba(51, 65, 85, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
         border-radius: 12px !important;
         padding: 14px 10px !important;
         text-align: center !important;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 1px 1px rgba(255, 255, 255, 0.04) inset !important;
-        backdrop-filter: blur(8px) !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset !important;
+        backdrop-filter: blur(14px) !important;
         transition: transform 0.2s ease !important;
     }}
     .stat-card:hover {{
         transform: translateY(-2px);
+        border-color: {active_theme['accent']} !important;
     }}
 
     /* Real-Time Telemetry & Simulation Widgets */
     .realtime-box {{
-        background: rgba(15, 23, 42, 0.72);
-        border: 1px solid rgba(51, 65, 85, 0.7);
-        border-radius: 12px;
-        padding: 14px 16px;
+        background: {active_theme['card_bg']} !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
+        border-radius: 14px;
+        padding: 16px 18px;
         margin-bottom: 14px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(16px) saturate(150%);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }}
     .eco-stat-kpi {{
-        background: rgba(30, 41, 59, 0.55);
-        border: 1px solid rgba(51, 65, 85, 0.6);
+        background: rgba(15, 23, 42, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 10px;
         padding: 12px 10px;
         text-align: center;
+        backdrop-filter: blur(12px);
         transition: transform 0.2s ease, border-color 0.2s ease;
     }}
     .eco-stat-kpi:hover {{
         transform: translateY(-2px);
-        border-color: #34d399;
+        border-color: {active_theme['accent']};
     }}
     
     .metric-pill {{
@@ -405,9 +409,19 @@ def load_zip_bytes(file_path: str) -> bytes:
 # ==============================================================================
 with st.sidebar:
     st.image(
-        "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&q=80",
-        caption="Future Fabric AI | Track 1",
+        "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=85",
+        caption="✨ Paris Haute Couture Studio | Runway AI",
         use_container_width=True,
+    )
+    st.markdown(
+        """
+        <div style='text-align: center; margin-top: -8px; margin-bottom: 12px;'>
+            <span style='background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 4px 12px; border-radius: 9999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;'>
+                ✨ HAUTE COUTURE EDITION
+            </span>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
     st.title("🌿 Smart Fabric AI")
     st.caption("Intelligent Sustainable Textile Decision System")
@@ -438,7 +452,7 @@ with st.sidebar:
     custom_user = st.text_input("Or enter custom user ID", value="").strip()
     active_user = custom_user if custom_user else selected_user
 
-    # High-contrast, dark professional personalization summary card
+    # High-contrast, glassmorphic personalization summary card
     user_prof = engine.personalization_engine.get_user_profile(active_user)
     learned = user_prof.get("learned_priorities", {
         "sustainability": "Medium",
@@ -449,9 +463,9 @@ with st.sidebar:
 
     st.markdown(
         f"""
-        <div style='background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-top: 8px; color: #f8fafc;'>
+        <div style='background: {active_theme['card_bg']}; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 14px; margin-top: 8px; color: #f8fafc; backdrop-filter: blur(14px);'>
             <div style='font-size: 0.9rem; font-weight: 800; color: #34d399; letter-spacing: 0.05em; margin-bottom: 6px;'>
-                👤 PERSONALIZATION
+                👤 PERSONALIZATION ATELIER
             </div>
             <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
                 <b>User:</b> <span style='color: #ffffff; font-weight: 600;'>{active_user}</span>
@@ -465,7 +479,7 @@ with st.sidebar:
             <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 8px;'>
                 <b>Avg User Rating:</b> {'⭐ ' + str(user_prof['avg_rating']) if user_prof['avg_rating'] > 0 else 'No ratings yet'}
             </div>
-            <hr style='border-color: #334155; margin: 8px 0;'>
+            <hr style='border-color: rgba(255, 255, 255, 0.12); margin: 8px 0;'>
             <div style='font-size: 0.8rem; font-weight: 700; color: #94a3b8; margin-bottom: 6px;'>
                 Learned Preferences
             </div>
@@ -486,11 +500,16 @@ with st.sidebar:
         st.rerun()
 
     st.markdown("---")
-    st.subheader("🎨 Background Atmosphere")
+    st.subheader("🎨 Fashion Atmosphere")
+    theme_keys = list(THEME_PRESETS.keys())
+    curr_theme = st.session_state.get("app_theme", DEFAULT_THEME_KEY)
+    if curr_theme not in theme_keys:
+        curr_theme = DEFAULT_THEME_KEY
+        st.session_state["app_theme"] = curr_theme
     chosen_theme_name = st.selectbox(
         "Theme Style",
-        list(THEME_PRESETS.keys()),
-        index=list(THEME_PRESETS.keys()).index(st.session_state.get("app_theme", "🌌 Cyber Emerald Aurora (Default)")),
+        theme_keys,
+        index=theme_keys.index(curr_theme),
         help="Instantly switch the background aesthetic across the entire project.",
     )
     if chosen_theme_name != st.session_state.get("app_theme"):
@@ -544,6 +563,36 @@ with tabs[0]:
         unsafe_allow_html=True,
     )
 
+    # Haute Couture Fashion Editorial Banner
+    st.markdown(
+        f"""
+        <div style='background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(56, 189, 248, 0.10) 50%, rgba(244, 63, 94, 0.10) 100%); 
+                    border: 1px solid rgba(255, 255, 255, 0.18); 
+                    border-radius: 16px; 
+                    padding: 18px 24px; 
+                    margin-bottom: 20px; 
+                    backdrop-filter: blur(16px) saturate(160%);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+                    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;'>
+            <div>
+                <span style='background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 4px 12px; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(16, 185, 129, 0.5);'>
+                    ✨ HAUTE COUTURE FASHION AI • PARIS & MILAN RUNWAY ATELIER
+                </span>
+                <h3 style='margin: 8px 0 4px 0; font-size: 1.45rem; color: #ffffff; font-weight: 800;'>
+                    Haute Couture Aesthetics Meets Precision Material Science
+                </h3>
+                <div style='font-size: 0.90rem; color: #cbd5e1;'>
+                    Paris • Milan • London • Tokyo Runway Standards with Multi-Dimensional Eco-Physics Optimization
+                </div>
+            </div>
+            <div>
+                <span class='live-beacon'><span class='live-beacon-dot'></span> LIVE ATELIER TELEMETRY</span>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
     # Download banner
     if os.path.exists(zip_path):
         st.download_button(
@@ -577,8 +626,8 @@ with tabs[0]:
         )
     with col_hero2:
         st.markdown(
-            """
-            <div style='background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);'>
+            f"""
+            <div style='background: {active_theme['card_bg']}; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 14px; padding: 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); backdrop-filter: blur(16px);'>
                 <h4 style='color: #34d399; margin-top: 0;'>🚀 Quick Start Workflow</h4>
                 <ol style='padding-left: 20px; color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;'>
                     <li>Open the <b>🎯 Recommendation</b> tab.</li>
