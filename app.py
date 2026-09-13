@@ -68,58 +68,58 @@ st.set_page_config(
 THEME_PRESETS = {
     "👗 Paris Haute Couture Runway (Catwalk Spotlight)": {
         "bg_css": (
-            "linear-gradient(135deg, rgba(15, 23, 42, 0.50) 0%, rgba(30, 41, 59, 0.40) 50%, rgba(15, 23, 42, 0.60) 100%), "
+            "linear-gradient(135deg, rgba(6, 12, 24, 0.72) 0%, rgba(10, 18, 34, 0.62) 50%, rgba(5, 9, 18, 0.82) 100%), "
             "url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=85')"
         ),
         "bg_size": "cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(10, 15, 26, 0.94) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.72) 0%, rgba(15, 23, 42, 0.78) 100%)",
+        "sidebar_bg": "linear-gradient(180deg, rgba(10, 16, 28, 0.96) 0%, rgba(6, 10, 18, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(13, 20, 36, 0.92) 0%, rgba(8, 14, 26, 0.96) 100%)",
         "accent": "#10b981",
-        "accent_glow": "rgba(16, 185, 129, 0.40)",
+        "accent_glow": "rgba(16, 185, 129, 0.50)",
     },
     "✨ Flowing Silk & Satin Drapes (Luxe Editorial)": {
         "bg_css": (
-            "linear-gradient(135deg, rgba(16, 24, 38, 0.48) 0%, rgba(30, 41, 59, 0.38) 50%, rgba(16, 24, 38, 0.58) 100%), "
+            "linear-gradient(135deg, rgba(8, 14, 28, 0.70) 0%, rgba(12, 20, 38, 0.60) 50%, rgba(6, 10, 20, 0.80) 100%), "
             "url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=1920&q=85')"
         ),
         "bg_size": "cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(16, 24, 38, 0.88) 0%, rgba(10, 15, 26, 0.94) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.72) 0%, rgba(16, 24, 38, 0.78) 100%)",
+        "sidebar_bg": "linear-gradient(180deg, rgba(10, 16, 28, 0.96) 0%, rgba(6, 10, 18, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(13, 20, 36, 0.92) 0%, rgba(8, 14, 26, 0.96) 100%)",
         "accent": "#38bdf8",
-        "accent_glow": "rgba(56, 189, 248, 0.40)",
+        "accent_glow": "rgba(56, 189, 248, 0.50)",
     },
     "🏛️ Milan Fashion Week Runway (Vogue Spotlight)": {
         "bg_css": (
-            "linear-gradient(135deg, rgba(24, 20, 32, 0.48) 0%, rgba(40, 32, 55, 0.38) 50%, rgba(20, 16, 28, 0.58) 100%), "
+            "linear-gradient(135deg, rgba(14, 12, 22, 0.72) 0%, rgba(22, 18, 34, 0.62) 50%, rgba(10, 8, 16, 0.82) 100%), "
             "url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1920&q=85')"
         ),
         "bg_size": "cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(24, 20, 32, 0.88) 0%, rgba(15, 12, 22, 0.94) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(40, 32, 55, 0.72) 0%, rgba(24, 20, 32, 0.78) 100%)",
+        "sidebar_bg": "linear-gradient(180deg, rgba(16, 12, 24, 0.96) 0%, rgba(9, 7, 14, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(20, 16, 32, 0.92) 0%, rgba(12, 9, 20, 0.96) 100%)",
         "accent": "#f43f5e",
-        "accent_glow": "rgba(244, 63, 94, 0.40)",
+        "accent_glow": "rgba(244, 63, 94, 0.50)",
     },
     "🌿 Eco-Couture Botanical Studio (Sustainable Loom)": {
         "bg_css": (
-            "linear-gradient(135deg, rgba(12, 26, 20, 0.48) 0%, rgba(20, 42, 32, 0.38) 50%, rgba(10, 22, 16, 0.58) 100%), "
+            "linear-gradient(135deg, rgba(6, 16, 12, 0.72) 0%, rgba(12, 24, 18, 0.62) 50%, rgba(5, 12, 9, 0.82) 100%), "
             "url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1920&q=85')"
         ),
         "bg_size": "cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(12, 26, 20, 0.88) 0%, rgba(8, 18, 14, 0.94) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(20, 42, 32, 0.72) 0%, rgba(12, 26, 20, 0.78) 100%)",
+        "sidebar_bg": "linear-gradient(180deg, rgba(8, 18, 14, 0.96) 0%, rgba(5, 11, 9, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(10, 22, 17, 0.92) 0%, rgba(6, 14, 11, 0.96) 100%)",
         "accent": "#34d399",
-        "accent_glow": "rgba(52, 211, 153, 0.40)",
+        "accent_glow": "rgba(52, 211, 153, 0.50)",
     },
     "👑 Paris Atelier & Bespoke Studio (Designer Workshop)": {
         "bg_css": (
-            "linear-gradient(135deg, rgba(25, 22, 18, 0.48) 0%, rgba(42, 36, 28, 0.38) 50%, rgba(20, 18, 14, 0.58) 100%), "
+            "linear-gradient(135deg, rgba(16, 14, 10, 0.72) 0%, rgba(24, 20, 15, 0.62) 50%, rgba(10, 8, 6, 0.82) 100%), "
             "url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=85')"
         ),
         "bg_size": "cover",
-        "sidebar_bg": "linear-gradient(180deg, rgba(25, 22, 18, 0.88) 0%, rgba(16, 14, 11, 0.94) 100%)",
-        "card_bg": "linear-gradient(135deg, rgba(42, 36, 28, 0.72) 0%, rgba(25, 22, 18, 0.78) 100%)",
+        "sidebar_bg": "linear-gradient(180deg, rgba(18, 15, 11, 0.96) 0%, rgba(10, 8, 6, 0.98) 100%)",
+        "card_bg": "linear-gradient(135deg, rgba(22, 18, 14, 0.92) 0%, rgba(14, 11, 8, 0.96) 100%)",
         "accent": "#fbbf24",
-        "accent_glow": "rgba(251, 191, 36, 0.40)",
+        "accent_glow": "rgba(251, 191, 36, 0.50)",
     },
 }
 
@@ -133,11 +133,25 @@ active_theme = THEME_PRESETS.get(st.session_state["app_theme"], THEME_PRESETS[DE
 # Custom Professional Fashion Aesthetic & Emerald Theme CSS with Real-time Design Elements
 st.markdown(
     f"""
-    <style>
+        <style>
     /* Force outer & inner Streamlit containers to be transparent so the fashion visual shines through */
-    html, body, [data-testid="stAppViewContainer"], .main, [data-testid="stMainBlockContainer"], .block-container {{
+    html, body, [data-testid="stAppViewContainer"], .main, [data-testid="stMainBlockContainer"], .block-container {
         background: transparent !important;
         background-color: transparent !important;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap');
+
+    /* GLOBAL HIGH-CONTRAST ULTRA-THICK & BRIGHT TYPOGRAPHY (ZERO BACKGROUND MIXING) */
+    * {{
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+    }}
+
+    html, body, .stApp, [data-testid="stAppViewContainer"], .main, .block-container {{
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        color: #ffffff !important;
     }}
 
     /* Full Application Window Fashion Runway Background */
@@ -147,240 +161,298 @@ st.markdown(
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
-        color: #f8fafc;
+        color: #ffffff !important;
     }}
 
-    /* Sidebar Glassmorphism with Fashion Blur */
+    /* Body text, paragraphs, lists: Ultra-thick (750), pure bright white, deep dual-layer contrast shadow */
+    p, li, span, a, div[data-testid="stMarkdownContainer"] p, div[data-testid="stMarkdownContainer"] li, .stMarkdown p, .stMarkdown li {{
+        font-weight: 750 !important;
+        color: #ffffff !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.98), 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+        letter-spacing: 0.01em !important;
+        line-height: 1.62 !important;
+    }}
+
+    /* Headings: Ultra-bold 900, Pure Crisp White, with deep anti-glare shadow */
+    h1, h2, h3, h4, h5, h6, .main-title {{
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.98), 0 0 6px rgba(0, 0, 0, 0.9) !important;
+        letter-spacing: -0.015em !important;
+    }}
+
+    /* Sidebar Glassmorphism with High-Contrast Border */
     [data-testid="stSidebar"] {{
         background: {active_theme['sidebar_bg']} !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.14) !important;
-        backdrop-filter: blur(20px) !important;
-        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.35) !important;
+        border-right: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+        backdrop-filter: blur(28px) !important;
+        box-shadow: 6px 0 30px rgba(0, 0, 0, 0.55) !important;
     }}
 
     /* Header Background */
     [data-testid="stHeader"] {{
-        background: rgba(15, 23, 42, 0.45) !important;
-        backdrop-filter: blur(14px) !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        background: rgba(8, 14, 26, 0.65) !important;
+        backdrop-filter: blur(18px) !important;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.16) !important;
     }}
     
     .main-title {{
-        font-size: 2.3rem;
-        font-weight: 800;
-        color: #ffffff;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-        margin-bottom: 0.2rem;
+        font-size: 2.45rem !important;
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        text-shadow: 0 3px 14px rgba(0, 0, 0, 0.98), 0 0 8px rgba(0, 0, 0, 0.9) !important;
+        margin-bottom: 0.2rem !important;
     }}
     
     .subtitle {{
-        font-size: 1.05rem;
-        color: #34d399;
-        font-weight: 600;
-        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-        margin-bottom: 1.5rem;
+        font-size: 1.15rem !important;
+        color: #34d399 !important;
+        font-weight: 800 !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 0 18px rgba(16, 185, 129, 0.8) !important;
+        margin-bottom: 1.5rem !important;
     }}
     
-    /* Real-Time Live Beacon & Keyframes */
-    @keyframes livePulse {{
-        0% {{ transform: scale(0.96); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }}
-        70% {{ transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }}
-        100% {{ transform: scale(0.96); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }}
-    }}
-    @keyframes dotBlink {{
-        0%, 100% {{ opacity: 1; transform: scale(1); }}
-        50% {{ opacity: 0.25; transform: scale(0.7); }}
-    }}
-    @keyframes glowBorder {{
-        0%, 100% {{ border-color: rgba(16, 185, 129, 0.5); }}
-        50% {{ border-color: rgba(56, 189, 248, 0.7); }}
+    /* Form labels, widget labels, sliders: Extra-thick, large, bright white */
+    label, [data-testid="stWidgetLabel"] p, [data-testid="stWidgetLabel"] span {{
+        font-weight: 800 !important;
+        font-size: 1.04rem !important;
+        color: #ffffff !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.98) !important;
     }}
 
-    .live-beacon {{
+    /* Captions and small notes: Crisp high-contrast silver-white */
+    .stCaption, [data-testid="stCaptionContainer"] p, small {{
+        color: #f8fafc !important;
+        font-weight: 750 !important;
+        font-size: 0.94rem !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95) !important;
+    }}
+
+    /* Buttons: Extra-bold and high-contrast */
+    .stButton button, button[kind="primary"], button[kind="secondary"] {{
+        font-weight: 900 !important;
+        letter-spacing: 0.03em !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    }}
+
+    /* Form selectboxes & inputs */
+    div[data-baseweb="select"] span, div[data-baseweb="select"] div, div[data-baseweb="input"] input {{
+        font-weight: 800 !important;
+        color: #ffffff !important;
+    }}
+
+    /* Real-Time Live Beacon & Keyframes */
+    @keyframes livePulse {
+        0% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+        100% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    @keyframes dotBlink {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.25; transform: scale(0.7); }
+    }
+    @keyframes glowBorder {
+        0%, 100% { border-color: rgba(16, 185, 129, 0.6); }
+        50% { border-color: rgba(56, 189, 248, 0.8); }
+    }
+
+    .live-beacon {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        background: rgba(16, 185, 129, 0.15);
-        border: 1px solid rgba(16, 185, 129, 0.5);
-        padding: 4px 10px;
+        background: rgba(16, 185, 129, 0.25);
+        border: 1px solid rgba(16, 185, 129, 0.6);
+        padding: 5px 12px;
         border-radius: 9999px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
         color: #34d399;
-    }}
-    .live-beacon-dot {{
-        width: 7px;
-        height: 7px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    .live-beacon-dot {
+        width: 8px;
+        height: 8px;
         background: #10b981;
         border-radius: 50%;
         animation: dotBlink 1.4s infinite ease-in-out;
-        box-shadow: 0 0 8px #10b981;
-    }}
+        box-shadow: 0 0 10px #10b981;
+    }
 
-    .trophy-badge {{
+    .trophy-badge {
         background: linear-gradient(135deg, #059669, #065f46);
         color: #ffffff;
+        padding: 0.4rem 0.95rem;
+        border-radius: 9999px;
+        font-weight: 800;
+        font-size: 0.90rem;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .confidence-badge {
+        background: rgba(16, 185, 129, 0.22);
+        color: #34d399;
+        border: 1px solid #059669;
         padding: 0.35rem 0.85rem;
         border-radius: 9999px;
         font-weight: 700;
-        font-size: 0.85rem;
+        font-size: 0.84rem;
         display: inline-block;
-        margin-bottom: 0.5rem;
-    }}
-
-    .confidence-badge {{
-        background: rgba(16, 185, 129, 0.15);
-        color: #34d399;
-        border: 1px solid #059669;
-        padding: 0.3rem 0.75rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        font-size: 0.8rem;
-        display: inline-block;
-    }}
+        text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
     
-    .top-match-card {{
+    .top-match-card {
         background: {active_theme['card_bg']} !important;
         border: 2px solid {active_theme['accent']} !important;
-        border-radius: 16px !important;
-        padding: 1.6rem !important;
-        box-shadow: 0 14px 34px -4px {active_theme['accent_glow']}, 0 0 1px 1px rgba(255, 255, 255, 0.1) inset !important;
-        backdrop-filter: blur(16px) saturate(160%) !important;
+        border-radius: 18px !important;
+        padding: 1.8rem !important;
+        box-shadow: 0 16px 40px -4px {active_theme['accent_glow']}, 0 0 1px 1px rgba(255, 255, 255, 0.16) inset !important;
+        backdrop-filter: blur(24px) saturate(180%) !important;
         margin-bottom: 1.5rem !important;
-        color: #f8fafc !important;
+        color: #ffffff !important;
         animation: glowBorder 4s infinite ease-in-out;
-    }}
+    }
     
-    .alt-card {{
+    .alt-card {
         background: {active_theme['card_bg']} !important;
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
-        border-radius: 14px !important;
-        padding: 1.2rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 16px !important;
+        padding: 1.3rem !important;
         height: 100% !important;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset !important;
-        backdrop-filter: blur(14px) saturate(150%) !important;
-        color: #f8fafc !important;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 1px 1px rgba(255, 255, 255, 0.12) inset !important;
+        backdrop-filter: blur(20px) saturate(170%) !important;
+        color: #ffffff !important;
         transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
-    }}
-    .alt-card:hover {{
+    }
+    .alt-card:hover {
         transform: translateY(-3px);
         border-color: {active_theme['accent']} !important;
-        box-shadow: 0 14px 32px {active_theme['accent_glow']} !important;
-    }}
+        box-shadow: 0 16px 36px {active_theme['accent_glow']} !important;
+    }
 
-    .stat-card {{
+    .stat-card {
         background: {active_theme['card_bg']} !important;
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
-        border-radius: 12px !important;
-        padding: 14px 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 14px !important;
+        padding: 16px 12px !important;
         text-align: center !important;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset !important;
-        backdrop-filter: blur(14px) !important;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35), 0 0 1px 1px rgba(255, 255, 255, 0.12) inset !important;
+        backdrop-filter: blur(20px) !important;
         transition: transform 0.2s ease !important;
-    }}
-    .stat-card:hover {{
+    }
+    .stat-card:hover {
         transform: translateY(-2px);
         border-color: {active_theme['accent']} !important;
-    }}
+    }
 
     /* Real-Time Telemetry & Simulation Widgets */
-    .realtime-box {{
+    .realtime-box {
         background: {active_theme['card_bg']} !important;
-        border: 1px solid rgba(255, 255, 255, 0.14) !important;
-        border-radius: 14px;
-        padding: 16px 18px;
-        margin-bottom: 14px;
-        backdrop-filter: blur(16px) saturate(150%);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }}
-    .eco-stat-kpi {{
-        background: rgba(15, 23, 42, 0.65);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 10px;
-        padding: 12px 10px;
-        text-align: center;
-        backdrop-filter: blur(12px);
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }}
-    .eco-stat-kpi:hover {{
-        transform: translateY(-2px);
-        border-color: {active_theme['accent']};
-    }}
+        border: 1px solid rgba(255, 255, 255, 0.20) !important;
+        border-radius: 16px !important;
+        padding: 18px 20px !important;
+        margin-bottom: 16px !important;
+        backdrop-filter: blur(24px) saturate(180%) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    }
+    .eco-stat-kpi {
+        background: rgba(8, 14, 26, 0.75) !important;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+        border-radius: 12px !important;
+        padding: 14px 12px !important;
+        text-align: center !important;
+        backdrop-filter: blur(16px) !important;
+        transition: transform 0.2s ease, border-color 0.2s ease !important;
+    }
+    .eco-stat-kpi:hover {
+        transform: translateY(-2px) !important;
+        border-color: {active_theme['accent']} !important;
+    }
     
-    .metric-pill {{
+    .metric-pill {
         display: inline-block;
-        padding: 0.25rem 0.65rem;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        font-weight: 600;
+        padding: 0.35rem 0.75rem;
+        border-radius: 8px;
+        font-size: 0.84rem;
+        font-weight: 700;
         margin-right: 0.4rem;
         margin-bottom: 0.4rem;
-    }}
-    .pill-green {{ background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }}
-    .pill-blue {{ background-color: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }}
-    .pill-orange {{ background-color: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }}
+        text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+    .pill-green { background-color: rgba(16, 185, 129, 0.28); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.6); }
+    .pill-blue { background-color: rgba(56, 189, 248, 0.28); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.6); }
+    .pill-orange { background-color: rgba(251, 191, 36, 0.28); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.6); }
     
-    .score-circle {{
-        font-size: 2.3rem;
-        font-weight: 800;
+    .score-circle {
+        font-size: 2.5rem;
+        font-weight: 900;
         color: #34d399;
-        text-shadow: 0 0 16px rgba(16, 185, 129, 0.45);
-    }}
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.6), 0 2px 6px rgba(0,0,0,0.9);
+    }
 
-    .progress-row {{
-        margin-bottom: 10px;
-    }}
-    .progress-header {{
+    .progress-row {
+        margin-bottom: 12px;
+    }
+    .progress-header {
         display: flex;
         justify-content: space-between;
-        font-size: 0.86rem;
-        font-weight: 600;
-        color: #e2e8f0;
-        margin-bottom: 3px;
-    }}
-    .progress-bar-bg {{
-        background: #334155;
+        font-size: 0.94rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 4px;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+    }
+    .progress-bar-bg {
+        background: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 9999px;
-        height: 9px;
+        height: 10px;
         overflow: hidden;
-    }}
-    .progress-bar-fill {{
+    }
+    .progress-bar-fill {
         height: 100%;
         border-radius: 9999px;
         background: linear-gradient(90deg, #10b981, #34d399);
-    }}
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    }
     
-    .pipeline-step {{
+    .pipeline-step {
         background: {active_theme['card_bg']} !important;
-        border: 1px solid rgba(51, 65, 85, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
         border-left: 4px solid #10b981 !important;
-        border-radius: 10px !important;
-        padding: 12px 16px !important;
-        margin-bottom: 8px !important;
-        color: #f8fafc !important;
-        backdrop-filter: blur(8px) !important;
-    }}
+        border-radius: 12px !important;
+        padding: 14px 18px !important;
+        margin-bottom: 10px !important;
+        color: #ffffff !important;
+        backdrop-filter: blur(16px) !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    }
     
-    .stTabs [data-baseweb="tab-list"] {{
+    .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background: rgba(13, 21, 39, 0.75);
-        padding: 6px;
-        border-radius: 12px;
-        border: 1px solid rgba(51, 65, 85, 0.65);
-        backdrop-filter: blur(12px);
-    }}
-    .stTabs [data-baseweb="tab"] {{
-        padding: 8px 16px;
-        font-weight: 600;
+        background: rgba(8, 14, 26, 0.85);
+        padding: 7px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(20px);
+    }
+    .stTabs [data-baseweb="tab"] {
+        padding: 9px 18px;
+        font-weight: 800;
+        font-size: 0.96rem;
         border-radius: 8px;
-        color: #94a3b8;
-    }}
-    .stTabs [aria-selected="true"] {{
-        background: rgba(16, 185, 129, 0.22) !important;
+        color: #ffffff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+    }
+    .stTabs [aria-selected="true"] {
+        background: rgba(16, 185, 129, 0.28) !important;
         color: #34d399 !important;
-        border: 1px solid rgba(16, 185, 129, 0.45) !important;
-    }}
+        font-weight: 800 !important;
+        border: 1px solid rgba(16, 185, 129, 0.6) !important;
+        text-shadow: 0 0 12px rgba(16, 185, 129, 0.7) !important;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -463,31 +535,31 @@ with st.sidebar:
 
     st.markdown(
         f"""
-        <div style='background: {active_theme['card_bg']}; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 14px; margin-top: 8px; color: #f8fafc; backdrop-filter: blur(14px);'>
-            <div style='font-size: 0.9rem; font-weight: 800; color: #34d399; letter-spacing: 0.05em; margin-bottom: 6px;'>
+        <div style='background: {active_theme['card_bg']}; border: 1.5px solid rgba(255, 255, 255, 0.20); border-radius: 14px; padding: 16px; margin-top: 8px; color: #ffffff; backdrop-filter: blur(20px); box-shadow: 0 8px 24px rgba(0,0,0,0.3);'>
+            <div style='font-size: 0.94rem; font-weight: 900; color: #34d399; letter-spacing: 0.06em; margin-bottom: 8px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>
                 👤 PERSONALIZATION ATELIER
             </div>
-            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
-                <b>User:</b> <span style='color: #ffffff; font-weight: 600;'>{active_user}</span>
+            <div style='font-size: 0.88rem; color: #ffffff; font-weight: 700; margin-bottom: 4px;'>
+                <b>User:</b> <span style='color: #ffffff; font-weight: 800;'>{active_user}</span>
             </div>
-            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
+            <div style='font-size: 0.88rem; color: #ffffff; font-weight: 700; margin-bottom: 4px;'>
                 <b>History:</b> {user_prof['interaction_count']} selections logged
             </div>
-            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 3px;'>
-                <b>Personalization Weight:</b> <span style='color: #34d399; font-weight: 700;'>{int(user_prof['learning_weight'] * 100)}%</span>
+            <div style='font-size: 0.88rem; color: #ffffff; font-weight: 700; margin-bottom: 4px;'>
+                <b>Personalization Weight:</b> <span style='color: #34d399; font-weight: 900;'>{int(user_prof['learning_weight'] * 100)}%</span>
             </div>
-            <div style='font-size: 0.85rem; color: #cbd5e1; margin-bottom: 8px;'>
+            <div style='font-size: 0.88rem; color: #ffffff; font-weight: 700; margin-bottom: 8px;'>
                 <b>Avg User Rating:</b> {'⭐ ' + str(user_prof['avg_rating']) if user_prof['avg_rating'] > 0 else 'No ratings yet'}
             </div>
-            <hr style='border-color: rgba(255, 255, 255, 0.12); margin: 8px 0;'>
-            <div style='font-size: 0.8rem; font-weight: 700; color: #94a3b8; margin-bottom: 6px;'>
+            <hr style='border-color: rgba(255, 255, 255, 0.20); margin: 8px 0;'>
+            <div style='font-size: 0.84rem; font-weight: 800; color: #34d399; margin-bottom: 6px; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>
                 Learned Preferences
             </div>
-            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 4px; font-size: 0.78rem; color: #e2e8f0;'>
-                <div>🌱 Sust: <b style='color: #34d399;'>{learned['sustainability']}</b></div>
-                <div>☁️ Comf: <b style='color: #38bdf8;'>{learned['comfort']}</b></div>
-                <div>💪 Durab: <b style='color: #fbbf24;'>{learned['durability']}</b></div>
-                <div>💰 Cost: <b style='color: #f472b6;'>{learned['cost']}</b></div>
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.82rem; color: #ffffff; font-weight: 750;'>
+                <div>🌱 Sust: <b style='color: #34d399; font-weight: 800;'>{learned['sustainability']}</b></div>
+                <div>☁️ Comf: <b style='color: #38bdf8; font-weight: 800;'>{learned['comfort']}</b></div>
+                <div>💪 Durab: <b style='color: #fbbf24; font-weight: 800;'>{learned['durability']}</b></div>
+                <div>💰 Cost: <b style='color: #f472b6; font-weight: 800;'>{learned['cost']}</b></div>
             </div>
         </div>
         """,
@@ -529,12 +601,12 @@ with st.sidebar:
     stats = get_feedback_summary_stats()
     st.markdown(
         f"""
-        <small style='color: #94a3b8;'>
-        <b>Global DB Stats:</b><br>
-        • Total Reviews: {stats['total_reviews']}<br>
-        • Overall Acceptance: {stats['acceptance_rate']}%<br>
-        • Top Chosen Fabric: {stats['top_selected_fabric']}
-        </small>
+        <div style='color: #ffffff; font-size: 0.86rem; font-weight: 750; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>
+            <b style='color: #34d399; font-size: 0.90rem; font-weight: 900;'>📊 Global DB Stats:</b><br>
+            • Total Reviews: <span style='color: #ffffff; font-weight: 800;'>{stats['total_reviews']}</span><br>
+            • Overall Acceptance: <span style='color: #34d399; font-weight: 800;'>{stats['acceptance_rate']}%</span><br>
+            • Top Chosen Fabric: <span style='color: #38bdf8; font-weight: 800;'>{stats['top_selected_fabric']}</span>
+        </div>
         """,
         unsafe_allow_html=True,
     )
@@ -581,7 +653,7 @@ with tabs[0]:
                 <h3 style='margin: 8px 0 4px 0; font-size: 1.45rem; color: #ffffff; font-weight: 800;'>
                     Haute Couture Aesthetics Meets Precision Material Science
                 </h3>
-                <div style='font-size: 0.90rem; color: #cbd5e1;'>
+                <div style='font-size: 0.95rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);'>
                     Paris • Milan • London • Tokyo Runway Standards with Multi-Dimensional Eco-Physics Optimization
                 </div>
             </div>
@@ -608,32 +680,46 @@ with tabs[0]:
     col_hero1, col_hero2 = st.columns([3, 2])
     with col_hero1:
         st.markdown(
-            """
-            ### The Core Challenge in Sustainable Fashion
-            Most sustainability tools simply recommend the fabric with the lowest carbon footprint or highest organic content. **In real garment production, this leads to failures:**
-            - **Unsuitable drape**: Choosing stiff hemp for delicate sarees or structured silk for rugged workwear.
-            - **Misaligned climate resilience**: Specifying virgin wool in sweltering humid monsoons, or lightweight linen in freezing winters.
-            - **Hidden trade-offs**: Conventional cotton consumes massive amounts of irrigation water; synthetics like recycled polyester shed persistent microplastics; bamboo viscose can involve heavy chemical processing.
-
-            ### Our Solution: Multi-Criteria Intelligent Decision Support
-            Our recommendation platform calculates a holistic, dynamically weighted compatibility score balancing:
-            1. **Garment Compatibility**: Pre-filtering fabrics engineered for the garment's functional demands.
-            2. **Climate Suitability**: Temperature regulation, breathability, and moisture wicking.
-            3. **User Priorities**: Sliders dynamically re-normalize weights to your specific sustainability, comfort, and durability goals.
-            4. **Adaptive Personalization**: SQLite-backed feedback learning with a **70% General + 30% User Preference** model.
-            5. **Explainable AI (XAI)**: Comprehensive breakdown of *Why this fabric?* and explicit *Trade-offs* with runner-up alternatives.
-            """
+            f"""
+            <div style='background: {active_theme['card_bg']}; border: 1.5px solid rgba(255, 255, 255, 0.20); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); backdrop-filter: blur(20px);'>
+                <h3 style='color: #ffffff; margin-top: 0; font-size: 1.35rem; font-weight: 900; text-shadow: 0 2px 6px rgba(0,0,0,0.8);'>
+                    The Core Challenge in Sustainable Fashion
+                </h3>
+                <p style='color: #ffffff; font-size: 0.98rem; line-height: 1.6; font-weight: 750;'>
+                    Most sustainability tools simply recommend the fabric with the lowest carbon footprint or highest organic content. <b style='color: #34d399;'>In real garment production, this leads to failures:</b>
+                </p>
+                <ul style='color: #ffffff; font-size: 0.95rem; line-height: 1.6; font-weight: 750; padding-left: 20px;'>
+                    <li><b style='color: #fbbf24;'>Unsuitable drape:</b> Choosing stiff hemp for delicate sarees or structured silk for rugged workwear.</li>
+                    <li><b style='color: #38bdf8;'>Misaligned climate resilience:</b> Specifying virgin wool in sweltering humid monsoons, or lightweight linen in freezing winters.</li>
+                    <li><b style='color: #f472b6;'>Hidden trade-offs:</b> Conventional cotton consumes massive amounts of irrigation water; synthetics like recycled polyester shed persistent microplastics; bamboo viscose can involve heavy chemical processing.</li>
+                </ul>
+                <h3 style='color: #34d399; font-size: 1.25rem; font-weight: 900; margin-top: 20px; text-shadow: 0 2px 6px rgba(0,0,0,0.8);'>
+                    Our Solution: Multi-Criteria Intelligent Decision Support
+                </h3>
+                <p style='color: #ffffff; font-size: 0.96rem; line-height: 1.6; font-weight: 750;'>
+                    Our recommendation platform calculates a holistic, dynamically weighted compatibility score balancing:
+                </p>
+                <ol style='color: #ffffff; font-size: 0.94rem; line-height: 1.6; font-weight: 750; padding-left: 20px;'>
+                    <li><b>Garment Compatibility:</b> Pre-filtering fabrics engineered for the garment's functional demands.</li>
+                    <li><b>Climate Suitability:</b> Temperature regulation, breathability, and moisture wicking.</li>
+                    <li><b>User Priorities:</b> Sliders dynamically re-normalize weights to your specific sustainability, comfort, and durability goals.</li>
+                    <li><b>Adaptive Personalization:</b> SQLite-backed feedback learning with a <b style='color: #34d399;'>70% General + 30% User Preference</b> model.</li>
+                    <li><b>Explainable AI (XAI):</b> Comprehensive breakdown of <i>Why this fabric?</i> and explicit <i>Trade-offs</i> with runner-up alternatives.</li>
+                </ol>
+            </div>
+            """,
+            unsafe_allow_html=True,
         )
     with col_hero2:
         st.markdown(
             f"""
-            <div style='background: {active_theme['card_bg']}; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 14px; padding: 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); backdrop-filter: blur(16px);'>
-                <h4 style='color: #34d399; margin-top: 0;'>🚀 Quick Start Workflow</h4>
-                <ol style='padding-left: 20px; color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;'>
-                    <li>Open the <b>🎯 Recommendation</b> tab.</li>
+            <div style='background: {active_theme['card_bg']}; border: 1.5px solid rgba(255, 255, 255, 0.20); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); backdrop-filter: blur(20px);'>
+                <h4 style='color: #34d399; margin-top: 0; font-size: 1.2rem; font-weight: 900; text-shadow: 0 2px 6px rgba(0,0,0,0.8);'>🚀 Quick Start Workflow</h4>
+                <ol style='padding-left: 20px; color: #ffffff; font-size: 0.96rem; line-height: 1.7; font-weight: 750;'>
+                    <li>Open the <b style='color: #34d399;'>🎯 Recommendation</b> tab.</li>
                     <li>Select your garment type (e.g., <i>T-shirt, Jacket, Saree</i>).</li>
                     <li>Specify your climate and priority sliders.</li>
-                    <li>Explore the <b>🏆 BEST MATCH</b>, detailed rationale, and trade-offs.</li>
+                    <li>Explore the <b style='color: #fbbf24;'>🏆 BEST MATCH</b>, detailed rationale, and trade-offs.</li>
                     <li>Provide feedback below the result to train your personalized user profile!</li>
                 </ol>
             </div>
@@ -642,7 +728,7 @@ with tabs[0]:
         )
 
         st.markdown("<br>", unsafe_allow_html=True)
-        st.markdown("#### Key System Metrics")
+        st.markdown("<h4 style='color: #ffffff; font-weight: 900; font-size: 1.15rem; text-shadow: 0 2px 6px rgba(0,0,0,0.8);'>Key System Metrics</h4>", unsafe_allow_html=True)
         
         # 4 responsive cards ensuring no text truncation (specifically fixing "14+ Criteria")
         kpi_cols = st.columns(4)
@@ -650,8 +736,8 @@ with tabs[0]:
             st.markdown(
                 """
                 <div class='stat-card'>
-                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Curated Fabrics</div>
-                    <div style='font-size: 1.35rem; color: #34d399; font-weight: 800;'>22</div>
+                    <div style='font-size: 0.82rem; color: #ffffff; font-weight: 800; margin-bottom: 4px; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>Curated Fabrics</div>
+                    <div style='font-size: 1.45rem; color: #34d399; font-weight: 900; text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);'>22</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -660,8 +746,8 @@ with tabs[0]:
             st.markdown(
                 """
                 <div class='stat-card'>
-                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Garment Types</div>
-                    <div style='font-size: 1.35rem; color: #38bdf8; font-weight: 800;'>13</div>
+                    <div style='font-size: 0.82rem; color: #ffffff; font-weight: 800; margin-bottom: 4px; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>Garment Types</div>
+                    <div style='font-size: 1.45rem; color: #38bdf8; font-weight: 900; text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);'>13</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -670,8 +756,8 @@ with tabs[0]:
             st.markdown(
                 """
                 <div class='stat-card'>
-                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Evaluation Criteria</div>
-                    <div style='font-size: 1.15rem; color: #10b981; font-weight: 800; white-space: nowrap;'>14+ Criteria</div>
+                    <div style='font-size: 0.82rem; color: #ffffff; font-weight: 800; margin-bottom: 4px; text-shadow: 0 1px 2px rgba(0,0,0,0.8); white-space: nowrap;'>Evaluation Criteria</div>
+                    <div style='font-size: 1.25rem; color: #10b981; font-weight: 900; white-space: nowrap; text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);'>14+ Criteria</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -680,8 +766,8 @@ with tabs[0]:
             st.markdown(
                 """
                 <div class='stat-card'>
-                    <div style='font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-bottom: 4px;'>Recommendation Factors</div>
-                    <div style='font-size: 1.15rem; color: #fbbf24; font-weight: 800; white-space: nowrap;'>Multi-Criteria</div>
+                    <div style='font-size: 0.82rem; color: #ffffff; font-weight: 800; margin-bottom: 4px; text-shadow: 0 1px 2px rgba(0,0,0,0.8); white-space: nowrap;'>Recommendation Factors</div>
+                    <div style='font-size: 1.20rem; color: #fbbf24; font-weight: 900; white-space: nowrap; text-shadow: 0 0 12px rgba(251, 191, 36, 0.6);'>Multi-Criteria</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -781,27 +867,27 @@ with tabs[1]:
         f"""
         <div class='realtime-box'>
             <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;'>
-                <span style='font-size: 0.88rem; font-weight: 700; color: #38bdf8;'>
-                    📡 Live Atmospheric Telemetry & Environmental Demand: <span style='color: #f8fafc;'>{sel_climate}</span>
+                <span style='font-size: 0.94rem; font-weight: 850; color: #38bdf8; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>
+                    📡 Live Atmospheric Telemetry & Environmental Demand: <span style='color: #ffffff; font-weight: 900;'>{sel_climate}</span>
                 </span>
                 <span class='live-beacon'><span class='live-beacon-dot'></span> SENSOR TELEMETRY</span>
             </div>
             <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px;'>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.74rem; color: #94a3b8;'>🌡️ Ambient Temp</div>
-                    <div style='font-size: 0.95rem; font-weight: 800; color: #f8fafc;'>{climate_telemetry['temp']}</div>
+                    <div style='font-size: 0.78rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>🌡️ Ambient Temp</div>
+                    <div style='font-size: 1.05rem; font-weight: 900; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>{climate_telemetry['temp']}</div>
                 </div>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.74rem; color: #94a3b8;'>💧 Ambient Humidity</div>
-                    <div style='font-size: 0.95rem; font-weight: 800; color: #38bdf8;'>{climate_telemetry['humidity']}</div>
+                    <div style='font-size: 0.78rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>💧 Ambient Humidity</div>
+                    <div style='font-size: 1.05rem; font-weight: 900; color: #38bdf8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);'>{climate_telemetry['humidity']}</div>
                 </div>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.74rem; color: #94a3b8;'>⚖️ Recommended GSM</div>
-                    <div style='font-size: 0.95rem; font-weight: 800; color: #34d399;'>{climate_telemetry['gsm']}</div>
+                    <div style='font-size: 0.78rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>⚖️ Recommended GSM</div>
+                    <div style='font-size: 1.05rem; font-weight: 900; color: #34d399; text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);'>{climate_telemetry['gsm']}</div>
                 </div>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.74rem; color: #94a3b8;'>🛡️ Thermal Requirement</div>
-                    <div style='font-size: 0.88rem; font-weight: 700; color: #fbbf24;'>{climate_telemetry['priority']}</div>
+                    <div style='font-size: 0.78rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>🛡️ Thermal Priority</div>
+                    <div style='font-size: 0.92rem; font-weight: 850; color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);'>{climate_telemetry['priority']}</div>
                 </div>
             </div>
         </div>
@@ -834,17 +920,17 @@ with tabs[1]:
                     <span class='confidence-badge' title='Confidence reflects the completeness of available fabric information used for this recommendation.'>
                         {confidence_label} ({confidence_desc})
                     </span>
-                    <h2 style='color: #ffffff; margin: 8px 0 2px 0;'>{top['fabric_name']}</h2>
-                    <p style='color: #94a3b8; margin: 0; font-size: 0.95rem;'>
-                        <b>Category:</b> {top['category']} | <b>Origin:</b> {top['origin_type']} | <b>Target Garment:</b> {sel_garment}
+                    <h2 style='color: #ffffff; margin: 8px 0 4px 0; font-size: 2.1rem; font-weight: 900; text-shadow: 0 2px 8px rgba(0,0,0,0.9);'>{top['fabric_name']}</h2>
+                    <p style='color: #ffffff; margin: 0; font-size: 1rem; font-weight: 800; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>
+                        <b>Category:</b> <span style='color: #38bdf8;'>{top['category']}</span> | <b>Origin:</b> <span style='color: #34d399;'>{top['origin_type']}</span> | <b>Target Garment:</b> <span style='color: #fbbf24;'>{sel_garment}</span>
                     </p>
                 </div>
                 <div style='text-align: right;'>
-                    <div style='font-size: 0.85rem; color: #94a3b8; font-weight: 600;'>Overall Compatibility</div>
-                    <div class='score-circle'>{top['final_score']:.1f}<span style='font-size: 1.1rem; color: #94a3b8;'> / 100</span></div>
+                    <div style='font-size: 0.90rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>Overall Compatibility</div>
+                    <div class='score-circle'>{top['final_score']:.1f}<span style='font-size: 1.15rem; color: #ffffff; font-weight: 800;'> / 100</span></div>
                 </div>
             </div>
-            <div style='margin-top: 14px;'>
+            <div style='margin-top: 16px;'>
                 <span class='metric-pill pill-green'>🌱 Sustainability: {sust_score}/100</span>
                 <span class='metric-pill pill-blue'>🌤️ Climate Fit: {climate_suit_score}/100</span>
                 <span class='metric-pill pill-blue'>☁️ Comfort: {comf_score}/100</span>
@@ -854,33 +940,33 @@ with tabs[1]:
             </div>
         </div>
 
-        <div class='realtime-box' style='border-color: rgba(16, 185, 129, 0.45);'>
-            <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;'>
-                <span style='font-size: 0.92rem; font-weight: 700; color: #34d399;'>
+        <div class='realtime-box' style='border-color: rgba(16, 185, 129, 0.5);'>
+            <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;'>
+                <span style='font-size: 0.98rem; font-weight: 900; color: #34d399; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>
                     🌿 Real-Time Eco-Impact Savings Calculator (LCA Simulation)
                 </span>
-                <span style='font-size: 0.78rem; color: #94a3b8;'>Simulated per 1 unit of {sel_garment} vs. conventional standard</span>
+                <span style='font-size: 0.84rem; color: #ffffff; font-weight: 750; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>Simulated per 1 unit of {sel_garment} vs. conventional standard</span>
             </div>
             <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 10px;'>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.75rem; color: #94a3b8;'>💧 Fresh Water Conserved</div>
-                    <div style='font-size: 1.25rem; font-weight: 800; color: #38bdf8;'>~{water_saved_l} L</div>
-                    <div style='font-size: 0.70rem; color: #64748b;'>vs. standard cotton</div>
+                    <div style='font-size: 0.80rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>💧 Fresh Water Conserved</div>
+                    <div style='font-size: 1.35rem; font-weight: 900; color: #38bdf8; text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);'>~{water_saved_l} L</div>
+                    <div style='font-size: 0.76rem; color: #ffffff; font-weight: 700; opacity: 0.9;'>vs. standard cotton</div>
                 </div>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.75rem; color: #94a3b8;'>📉 Carbon Abatement</div>
-                    <div style='font-size: 1.25rem; font-weight: 800; color: #34d399;'>~{carbon_offset_kg} kg</div>
-                    <div style='font-size: 0.70rem; color: #64748b;'>CO2e footprint avoided</div>
+                    <div style='font-size: 0.80rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>📉 Carbon Abatement</div>
+                    <div style='font-size: 1.35rem; font-weight: 900; color: #34d399; text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);'>~{carbon_offset_kg} kg</div>
+                    <div style='font-size: 0.76rem; color: #ffffff; font-weight: 700; opacity: 0.9;'>CO2e footprint avoided</div>
                 </div>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.75rem; color: #94a3b8;'>⚡ Energy Conserved</div>
-                    <div style='font-size: 1.25rem; font-weight: 800; color: #fbbf24;'>~{energy_saved_kwh} kWh</div>
-                    <div style='font-size: 0.70rem; color: #64748b;'>manufacturing savings</div>
+                    <div style='font-size: 0.80rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>⚡ Energy Conserved</div>
+                    <div style='font-size: 1.35rem; font-weight: 900; color: #fbbf24; text-shadow: 0 0 12px rgba(251, 191, 36, 0.6);'>~{energy_saved_kwh} kWh</div>
+                    <div style='font-size: 0.76rem; color: #ffffff; font-weight: 700; opacity: 0.9;'>manufacturing savings</div>
                 </div>
                 <div class='eco-stat-kpi'>
-                    <div style='font-size: 0.75rem; color: #94a3b8;'>🌊 Ocean Microplastics</div>
-                    <div style='font-size: 0.92rem; font-weight: 800; color: #a78bfa; margin-top: 4px;'>{microplastic_desc}</div>
-                    <div style='font-size: 0.70rem; color: #64748b;'>zero toxic shedding</div>
+                    <div style='font-size: 0.80rem; color: #ffffff; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.8);'>🌊 Ocean Microplastics</div>
+                    <div style='font-size: 0.98rem; font-weight: 900; color: #c084fc; margin-top: 4px; text-shadow: 0 0 12px rgba(192, 132, 252, 0.6);'>{microplastic_desc}</div>
+                    <div style='font-size: 0.76rem; color: #ffffff; font-weight: 700; opacity: 0.9;'>zero toxic shedding</div>
                 </div>
             </div>
         </div>
@@ -992,25 +1078,25 @@ with tabs[1]:
             runner_up = alts[0]
             st.markdown(
                 f"""
-                <div style='background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-bottom: 12px; color: #f8fafc;'>
-                    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.85rem;'>
-                        <div style='border-right: 1px solid #334155; padding-right: 8px;'>
-                            <b style='color: #34d399;'>🏆 Best Match: {top['fabric_name']}</b><br>
-                            • Overall Score: <b>{top['final_score']:.1f}/100</b><br>
-                            • Sustainability: <b>{sust_score}/100</b><br>
-                            • Climate Suitability: <b>{climate_suit_score}/100</b><br>
-                            • Comfort: <b>{comf_score}/100</b><br>
-                            • Durability: <b>{dur_score}/100</b><br>
-                            <span style='color: #94a3b8; font-size: 0.78rem;'>Advantage: {str(top['advantages'])[:60]}...</span>
+                <div style='background: {active_theme["card_bg"]}; border: 1.5px solid rgba(255, 255, 255, 0.20); border-radius: 12px; padding: 16px; margin-bottom: 12px; color: #ffffff; backdrop-filter: blur(20px);'>
+                    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.90rem; font-weight: 750;'>
+                        <div style='border-right: 1.5px solid rgba(255, 255, 255, 0.20); padding-right: 10px;'>
+                            <b style='color: #34d399; font-size: 1.05rem; font-weight: 900; text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);'>🏆 Best Match: {top['fabric_name']}</b><br>
+                            • Overall Score: <b style='color: #ffffff; font-weight: 900;'>{top['final_score']:.1f}/100</b><br>
+                            • Sustainability: <b style='color: #ffffff; font-weight: 800;'>{sust_score}/100</b><br>
+                            • Climate Suitability: <b style='color: #ffffff; font-weight: 800;'>{climate_suit_score}/100</b><br>
+                            • Comfort: <b style='color: #ffffff; font-weight: 800;'>{comf_score}/100</b><br>
+                            • Durability: <b style='color: #ffffff; font-weight: 800;'>{dur_score}/100</b><br>
+                            <span style='color: #ffffff; font-size: 0.82rem; font-weight: 800;'>Advantage: {str(top['advantages'])[:60]}...</span>
                         </div>
-                        <div style='padding-left: 4px;'>
-                            <b style='color: #cbd5e1;'>🥈 Runner-up: {runner_up['fabric_name']}</b><br>
-                            • Overall Score: <b>{runner_up['final_score']:.1f}/100</b><br>
-                            • Sustainability: <b>{int(runner_up['sustainability_score'])}/100</b><br>
-                            • Climate Suitability: <b>{int(runner_up['climate_score'])}/100</b><br>
-                            • Comfort: <b>{int(runner_up['comfort_score'])}/100</b><br>
-                            • Durability: <b>{int(runner_up['durability_score'])}/100</b><br>
-                            <span style='color: #94a3b8; font-size: 0.78rem;'>Limitation: {str(runner_up['limitations'])[:60]}...</span>
+                        <div style='padding-left: 6px;'>
+                            <b style='color: #38bdf8; font-size: 1.05rem; font-weight: 900; text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);'>🥈 Runner-up: {runner_up['fabric_name']}</b><br>
+                            • Overall Score: <b style='color: #ffffff; font-weight: 900;'>{runner_up['final_score']:.1f}/100</b><br>
+                            • Sustainability: <b style='color: #ffffff; font-weight: 800;'>{int(runner_up['sustainability_score'])}/100</b><br>
+                            • Climate Suitability: <b style='color: #ffffff; font-weight: 800;'>{int(runner_up['climate_score'])}/100</b><br>
+                            • Comfort: <b style='color: #ffffff; font-weight: 800;'>{int(runner_up['comfort_score'])}/100</b><br>
+                            • Durability: <b style='color: #ffffff; font-weight: 800;'>{int(runner_up['durability_score'])}/100</b><br>
+                            <span style='color: #ffffff; font-size: 0.82rem; font-weight: 800;'>Limitation: {str(runner_up['limitations'])[:60]}...</span>
                         </div>
                     </div>
                 </div>
@@ -1050,12 +1136,12 @@ with tabs[1]:
 
     st.markdown(
         f"""
-        <div style='background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-bottom: 20px;'>
-            <h5 style='color: #34d399; margin: 0 0 6px 0;'>🧠 How Personalization Works</h5>
-            <div style='font-size: 1.1rem; font-weight: 700; color: #f8fafc; margin-bottom: 6px;'>
+        <div style='background: {active_theme["card_bg"]}; border: 1.5px solid rgba(255, 255, 255, 0.20); border-radius: 12px; padding: 16px; margin-bottom: 20px; backdrop-filter: blur(20px);'>
+            <h5 style='color: #34d399; margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 900; text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);'>🧠 How Personalization Works</h5>
+            <div style='font-size: 1.1rem; font-weight: 800; color: #ffffff; margin-bottom: 6px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);'>
                 {general_weight_pct}% General Recommendation + {active_weight_pct}% User Preference (Target Model: 70% / 30%)
             </div>
-            <p style='color: #cbd5e1; font-size: 0.9rem; margin: 0;'>
+            <p style='color: #ffffff; font-weight: 750; font-size: 0.92rem; margin: 0; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);'>
                 The recommendation combines general fabric suitability with your learned preferences from previous feedback. 
                 {"<b>Adaptive learning is currently active!</b>" if active_weight_pct > 0 else "<i>Currently using 100% general recommendation. Submit feedback below to activate your 30% preference learning weight.</i>"}
             </p>
@@ -1073,13 +1159,13 @@ with tabs[1]:
                 st.markdown(
                     f"""
                     <div class='alt-card'>
-                        <span style='background: #334155; color: #f8fafc; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;'>#{idx} ALTERNATIVE</span>
-                        <h4 style='color: #34d399; margin: 6px 0;'>{alt_row['fabric_name']}</h4>
-                        <div style='font-size: 1.5rem; font-weight: 800; color: #f8fafc;'>{alt_row['final_score']:.1f}<span style='font-size: 0.9rem; color: #94a3b8;'> / 100</span></div>
-                        <p style='font-size: 0.82rem; color: #cbd5e1; margin: 4px 0;'><b>Category:</b> {alt_row['category']}</p>
-                        <p style='font-size: 0.8rem; color: #34d399;'>🌱 Sust: <b>{alt_row['sustainability_score']}</b> | ☁️ Comf: <b>{alt_row['comfort_score']}</b></p>
-                        <p style='font-size: 0.8rem; color: #38bdf8;'>🛡️ Dura: <b>{alt_row['durability_score']}</b> | 💰 Cost: <b>{alt_row['cost_score']}</b></p>
-                        <p style='font-size: 0.78rem; color: #94a3b8; margin-top: 6px;'>{alt_row['advantages'][:75]}...</p>
+                        <span style='background: rgba(255, 255, 255, 0.15); color: #ffffff; padding: 3px 10px; border-radius: 6px; font-weight: 800; font-size: 0.78rem; border: 1px solid rgba(255, 255, 255, 0.25);'>#{idx} ALTERNATIVE</span>
+                        <h4 style='color: #34d399; margin: 8px 0; font-weight: 900; font-size: 1.22rem; text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);'>{alt_row['fabric_name']}</h4>
+                        <div style='font-size: 1.6rem; font-weight: 900; color: #ffffff; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);'>{alt_row['final_score']:.1f}<span style='font-size: 0.95rem; color: #34d399; font-weight: 800;'> / 100</span></div>
+                        <p style='font-size: 0.88rem; color: #ffffff; font-weight: 800; margin: 4px 0;'><b>Category:</b> {alt_row['category']}</p>
+                        <p style='font-size: 0.85rem; color: #34d399; font-weight: 800;'>🌱 Sust: <b>{alt_row['sustainability_score']}</b> | ☁️ Comf: <b>{alt_row['comfort_score']}</b></p>
+                        <p style='font-size: 0.85rem; color: #38bdf8; font-weight: 800;'>🛡️ Dura: <b>{alt_row['durability_score']}</b> | 💰 Cost: <b>{alt_row['cost_score']}</b></p>
+                        <p style='font-size: 0.82rem; color: #ffffff; font-weight: 750; margin-top: 6px; line-height: 1.4;'>{alt_row['advantages'][:75]}...</p>
                     </div>
                     """,
                     unsafe_allow_html=True,
@@ -1545,8 +1631,8 @@ with tabs[7]:
         st.markdown(
             f"""
             <div class='pipeline-step'>
-                <b style='color: #34d399;'>{title}</b>
-                <p style='color: #cbd5e1; margin: 3px 0 0 0; font-size: 0.88rem;'>{desc}</p>
+                <b style='color: #34d399; font-size: 1.05rem; font-weight: 900; text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);'>{title}</b>
+                <p style='color: #ffffff; font-weight: 750; margin: 4px 0 0 0; font-size: 0.92rem; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);'>{desc}</p>
             </div>
             """,
             unsafe_allow_html=True,
